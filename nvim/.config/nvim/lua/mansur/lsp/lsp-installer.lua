@@ -7,7 +7,7 @@ lsp_installer.on_server_ready(function(server)
 
   local import_ok, settings = pcall(require, 'mansur/lsp/settings/' .. server.name)
   if import_ok then
-    vim.tbl_deep_extend('force', settings, opts)
+    opts = vim.tbl_deep_extend('force', opts, settings)
   end
 
   server:setup(opts)
