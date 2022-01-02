@@ -29,6 +29,11 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 augroup END
 
+augroup CursorLine
+  autocmd!
+  autocmd BufEnter,FocusGained,WinEnter * set cursorline
+  autocmd BufLeave,FocusLost,WinLeave   * set nocursorline
+augroup END
 " *****************************************************************************
 " Vim-PLug core
 " *****************************************************************************
