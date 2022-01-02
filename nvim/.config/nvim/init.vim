@@ -34,6 +34,7 @@ augroup CursorLine
   autocmd BufEnter,FocusGained,WinEnter * set cursorline
   autocmd BufLeave,FocusLost,WinLeave   * set nocursorline
 augroup END
+
 " *****************************************************************************
 " Vim-PLug core
 " *****************************************************************************
@@ -57,6 +58,7 @@ Plug 'voldikss/vim-floaterm'
 
 " Color theme
 Plug 'gruvbox-community/gruvbox'
+Plug 'kristijanhusak/vim-hybrid-material'
 
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
@@ -90,7 +92,10 @@ call plug#end()
 nnoremap <Space> <Nop>
 let mapleader = " "
 
-colorscheme gruvbox
+set background=dark
+let g:enable_bold_font = 1
+let g:enable_italic_font = 1
+colorscheme hybrid_reverse
 
 lua require('mansur')
 
