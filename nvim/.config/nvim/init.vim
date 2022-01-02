@@ -48,6 +48,8 @@ endif
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'voldikss/vim-floaterm'
+
 " Color theme
 Plug 'gruvbox-community/gruvbox'
 
