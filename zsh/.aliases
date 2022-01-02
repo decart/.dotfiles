@@ -1,0 +1,53 @@
+# open ~/.zshrc in using the default editor specified in $EDITOR
+alias ec="$EDITOR $HOME/.zshrc"
+alias ea="$EDITOR $HOME/.aliases"
+
+# source ~/.zshrc
+alias sc="source $HOME/.zshrc"
+
+# navigation aliases
+alias dev="cd ~/dev"
+alias html="cd ~/data/html"
+alias js="cd ~/data/javascript"
+alias tmp='cd ~/data/temp'
+
+# Files list
+alias l="ls --group-directories-first -lFh"
+alias lS="ls --group-directories-first -1FSsh"
+alias la="ls --group-directories-first -lAFh"
+alias lart="ls --group-directories-first -1Fcart"
+alias ldot="ls --group-directories-first -ld .*"
+alias ll="ls --group-directories-first -l"
+alias lr="ls --group-directories-first -tRFh"
+alias lrt="ls --group-directories-first -1Fcrt"
+alias ls="ls --group-directories-first --color=tty"
+alias lsa="ls --group-directories-first -lah"
+alias lt="ls --group-directories-first -ltFh"
+
+alias vim="nvim"
+alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
+alias rg="rg -i -p"
+alias dh="dirs -v" # Directory history
+alias art="php artisan"
+
+alias sail='./vendor/bin/sail'
+alias artdb='art migrate:reset && art migrate && art db:seed && art ide-helper:model -RW'
+alias sv='sudo systemctl'
+alias svs='sudo systemctl status'
+alias svr='sudo systemctl restart'
+alias rcp='rsync -rzv'
+
+# Bat
+if [ "$(command -v batcat)" ]; then
+  unalias -m 'cat'
+  unalias -m 'less'
+  alias cat='batcat -n --theme="OneHalfDark"'
+  alias less='batcat --theme="OneHalfDark"'
+fi
+
+if [ "$(command -v bat)" ]; then
+  unalias -m 'cat'
+  unalias -m 'less'
+  alias cat='bat -pp --theme="OneHalfDark"'
+  alias less='bat --theme="OneHalfDark"'
+fi

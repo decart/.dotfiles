@@ -1,0 +1,102 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "root",
+          "style": "plain",
+          "foreground": "#E06C75",
+          "properties": {
+            "root_icon": "root",
+            "prefix": "",
+            "postfix": " <#ffffff>in</> "
+          }
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#55B9C4",
+          "properties": {
+            "style": "mixed",
+            "prefix": "",
+            "mixed_threshold": 10
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#C678DD",
+          "properties": {
+            "prefix": "<#ffffff>on</> ",
+            "display_status": true
+          }
+        },
+        {
+          "type": "php",
+          "style": "plain",
+          "foreground": "#6b81ff",
+          "properties": {
+            "display_version": true,
+            "prefix": "\uE608 "
+          }
+        },
+        {
+          "type": "node",
+          "style": "plain",
+          "foreground": "#98C379",
+          "properties": {
+            "display_version": true,
+            "enable_version_mismatch": true,
+            "version_mismatch_color": "#f00000",
+            "prefix": " \uE781 "
+          }
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "#55B9C4",
+          "properties": {
+            "display_version": false,
+            "prefix": " \uE235 "
+          }
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "#aaaaaa",
+          "properties": {
+            "style": "round",
+            "prefix": " <#6b81ff>\ufbab</> "
+          }
+        },
+        {
+          "type": "exit",
+          "style": "plain",
+          "foreground": "#C94A16",
+          "properties": {
+            "prefix": "\uf06a "
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#63F08C",
+          "properties": {
+            "prefix": "",
+            "text": "\u279C"
+          }
+        }
+      ]
+    }
+  ]
+}

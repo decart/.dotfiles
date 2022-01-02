@@ -1,0 +1,58 @@
+function exists { which $1 &> /dev/null }
+
+function usephp {
+    readonly version=${1:?"The version must be specified."}                                                             
+
+    sudo update-alternatives --set php "/usr/bin/php$version"
+    sudo update-alternatives --set phar "/usr/bin/phar$version"
+    sudo update-alternatives --set phar.phar "/usr/bin/phar.phar$version"
+}
+
+function penv_action {
+    case $1 in
+        "create" )
+            python3 -m venv "$PYTHON_ENV_DIR/$2"
+            echo "Successfully created: $PYTHON_ENV_DIR/$2"
+        ;;
+    esac
+}
+
+function penv {
+    if [ $# -eq 0 ]; then
+        ls -l "$PYTHON_ENV_DIR" | awk '{if (length($9) > 0) print $9}' | nl -w2 -s'> '
+    elif [ $# -eq 1 ]; then
+        source $PYTHON_ENV_DIR/$1/bin/activate
+    elif [ $# -eq 2 ]; then
+        penv_action $1 $2
+    fi
+}
+
+if exists peco; then
+    function peco_dev {
+        local dev_dirs_list=("${(@s/:/)DEV_DIRS}")
+        local all_dev_dirs
+        local tac
+
+        for d in $dev_dirs_list; do
+            all_dev_dirs+="$(ls -1hd $d/*)\n"
+        done
+
+        selected_dir=$(echo $all_dev_dirs | peco --query "$LBUFFER")
+
+        if [ -n "$selected_dir" ]; then
+            BUFFER="cd $selected_dir"
+            zle accept-line
+        fi
+    }
+
+    zle -N peco_dev
+    bindkey '^F' peco_dev
+fi
+
+function iapt() {
+    if [ -z "$1" ]; then
+        echo "Usage: iapt <initial search string> - select packages on peco and they will be installed"
+    else
+        sudo apt-cache search $1 | peco | awk '{ print $1 }' | tr "\n" " " | xargs -- sudo apt-get install -y
+    fi
+}

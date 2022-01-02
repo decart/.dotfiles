@@ -1,0 +1,10 @@
+[core]
+	fileMode = false
+	editor = nvim
+[user]
+	name = mansur
+	email = yaponomat@gmail.com
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
