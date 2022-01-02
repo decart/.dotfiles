@@ -1,11 +1,10 @@
 require('mansur/telescope')
 require('mansur/lualine')
-require('mansur/gitsigns')
+require('mansur/git-signs')
 require('mansur/nvimtree')
 require('mansur/barbar')
 require('mansur/dashboard')
 -- require('mansur/startify')
 require('mansur/lsp')
-require('mansur/cmp')
+require('mansur/cmp-setup')
 require('mansur/treesitter')
-
