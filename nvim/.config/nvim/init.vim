@@ -86,7 +86,6 @@ nnoremap <Space> <Nop>
 let mapleader = " "
 
 colorscheme gruvbox
-set background=dark
 
 lua require('mansur')
 
