@@ -19,7 +19,6 @@ nix-env -iA \
     nixpkgs.antibody \
     nixpkgs.git \
     nixpkgs.gitui \
-    nixpkgs.neovim \
     nixpkgs.tmux \
     nixpkgs.stow \
     nixpkgs.fzf \
@@ -30,6 +29,11 @@ nix-env -iA \
     nixpkgs.curl \
     nixpkgs.python39Full \
     nixpkgs.direnv
+
+# Install neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+sudo mv nvim.appimage /usr/local/bin/nvim
 
 if [[ $(lsb_release -is) == "Ubuntu" ]]; then
   source ubuntu.sh
