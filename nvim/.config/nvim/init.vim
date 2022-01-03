@@ -86,6 +86,8 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'onsails/lspkind-nvim'
 Plug 'ray-x/cmp-treesitter'
 Plug 'L3MON4D3/LuaSnip'
+Plug 'numToStr/Comment.nvim'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 call plug#end()
 

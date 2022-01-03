@@ -8,4 +8,5 @@ require('mansur/lsp')
 require('mansur/cmp-setup')
 require('mansur/treesitter')
 require('mansur/floaterm')
+require('mansur/comment')
 
