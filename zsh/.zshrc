@@ -1,6 +1,6 @@
 
 if [ -s ~/.zenv ]; then
-  source .zenv
+  source ~/.zenv
 fi
 
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
