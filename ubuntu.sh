@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Install server
 sudo apt update
+sudo apt install llvm clang build-essential
+
+# Install server
 sudo apt -y install \
   nginx \
   mariadb-server \
