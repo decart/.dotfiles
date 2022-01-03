@@ -66,3 +66,8 @@ fi
 if [ -s ~/.mansur.omp.json ]; then
   eval "$(oh-my-posh --init --shell zsh --config ~/.mansur.omp.json)"
 fi
+
+if [ -d ~/.config/composer/vendor/bin ]; then
+  export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+fi
+
