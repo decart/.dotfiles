@@ -32,9 +32,6 @@ alias art="php artisan"
 
 alias sail='./vendor/bin/sail'
 alias artdb='art migrate:reset && art migrate && art db:seed && art ide-helper:model -RW'
-alias sv='sudo systemctl'
-alias svs='sudo systemctl status'
-alias svr='sudo systemctl restart'
 alias rcp='rsync -rzv'
 
 # Bat

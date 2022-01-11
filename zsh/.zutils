@@ -1,5 +1,21 @@
 function exists { which $1 &> /dev/null }
 
+function ss {
+  sudo service $1 start
+}
+
+function sst {
+  sudo service $1 stop
+}
+
+function sr {
+  sudo service $1 restart
+}
+
+function st {
+  sudo service $1 status
+}
+
 function usephp {
     readonly version=${1:?"The version must be specified."}                                                             
 
