@@ -113,6 +113,8 @@ nnoremap <C-b> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 
+nnoremap <leader>q :qa<CR>
+nnoremap <leader><esc> :qa!<CR>
 nnoremap <C-\> :vsplit %<CR>
 
 " Shift/unshift selected lines
