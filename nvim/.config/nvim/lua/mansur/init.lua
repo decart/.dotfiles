@@ -9,4 +9,5 @@ require('mansur/cmp-setup')
 require('mansur/treesitter')
 require('mansur/floaterm')
 require('mansur/comment')
+require('mansur/hop')
 

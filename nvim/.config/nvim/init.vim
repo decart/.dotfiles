@@ -73,6 +73,7 @@ Plug 'romgrk/barbar.nvim'
 Plug 'glepnir/dashboard-nvim'
 Plug 'mhinz/vim-startify'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'phaazon/hop.nvim'
 
 " Laguages
 Plug 'neovim/nvim-lspconfig'
@@ -112,6 +113,8 @@ nnoremap <C-l> <C-w><C-l>
 nnoremap <C-b> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
+
+nnoremap s :HopWord<CR>
 
 nnoremap <leader>q :qa<CR>
 nnoremap <leader><esc> :qa!<CR>
