@@ -92,15 +92,13 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 call plug#end()
 
-nnoremap <Space> <Nop>
-let mapleader = " "
-
 set background=dark
 let g:enable_bold_font = 1
 let g:enable_italic_font = 1
 colorscheme hybrid_reverse
 
-lua require('mansur')
+nnoremap <Space> <Nop>
+let mapleader = " "
 
 noremap <C-p> :Telescope find_files<CR>
 noremap <C-f> :Telescope live_grep<CR>
@@ -134,3 +132,6 @@ nnoremap <silent>    <A->> :BufferMoveNext<CR>
 
 " Close buffer
 nnoremap <silent>    <C-w> :BufferClose<CR>
+
+lua require('mansur')
+
