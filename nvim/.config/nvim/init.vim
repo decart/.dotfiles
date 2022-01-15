@@ -117,7 +117,7 @@ nnoremap <leader>n :NvimTreeFindFile<CR>
 nnoremap s :HopWord<CR>
 
 nnoremap <leader>q :qa<CR>
-nnoremap <leader><esc> :qa!<CR>
+nnoremap <leader><S-q> :qa!<CR>
 nnoremap <C-s> :w<CR>
 nnoremap <C-\> :vsplit %<CR>
 
