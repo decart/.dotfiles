@@ -112,7 +112,7 @@ nnoremap <C-b> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 
-nnoremap s :HopWord<CR>
+nnoremap s :HopChar1<CR>
 
 nnoremap <leader>q :qa<CR>
 nnoremap <leader><S-q> :qa!<CR>
