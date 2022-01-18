@@ -22,6 +22,8 @@ set smartcase
 set noshowmode
 set signcolumn=number
 set clipboard=unnamedplus
+set listchars=lead:·,tab:▷ ,trail:·,extends:◣,precedes:◢,nbsp:○
+set list
 
 augroup numbertoggle
   autocmd!
@@ -118,6 +120,7 @@ nnoremap <leader>q :qa<CR>
 nnoremap <leader><S-q> :qa!<CR>
 nnoremap <C-s> :w<CR>
 nnoremap <C-\> :vsplit %<CR>
+nnoremap <F5> :set list!<CR>
 
 " Shift/unshift selected lines
 vnoremap <Tab> >gv
