@@ -44,6 +44,8 @@ fi
 nix-collect-garbage
 
 # stow
+mkdir -p ~/.config/nvim
+
 stow zsh
 stow git
 stow nvim
