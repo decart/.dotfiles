@@ -6,10 +6,10 @@ vim.o.completeopt = 'menuone,noselect'
 
 cmp.setup {
   formatting = {
-		format = lspkind.cmp_format({
+  format = lspkind.cmp_format({
       with_text = true,
     })
-	},
+  },
 
   mapping = {
     -- Use Tab and shift-Tab to navigate autocomplete menu
