@@ -94,11 +94,6 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 call plug#end()
 
-set background=dark
-let g:enable_bold_font = 1
-let g:enable_italic_font = 1
-colorscheme hybrid_reverse
-
 nnoremap <Space> <Nop>
 let mapleader = " "
 
