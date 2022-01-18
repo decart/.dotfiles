@@ -18,7 +18,6 @@ nix-env -iA \
     nixpkgs.zsh \
     nixpkgs.antibody \
     nixpkgs.git \
-    nixpkgs.gitui \
     nixpkgs.tmux \
     nixpkgs.stow \
     nixpkgs.fzf \
@@ -29,6 +28,12 @@ nix-env -iA \
     nixpkgs.curl \
     nixpkgs.python39Full \
     nixpkgs.direnv
+
+# Install gitui
+curl -LO https://github.com/extrawurst/gitui/releases/latest/download/gitui-linux-musl.tar.gz
+sudo tar -zxf gitui-linux-musl.tar.gz --directory /usr/local/bin
+sudo chmod +x /usr/local/bin/gitui
+rm -f gitui-linux-musl.tar.gz
 
 # Install neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
