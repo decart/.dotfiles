@@ -79,7 +79,7 @@ Plug 'phaazon/hop.nvim'
 
 " Laguages
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer', { 'do': ':LspInstall --sync pyright tsserver jsonls html cssls sumneko_lua phpactor vimls vuels' }
+Plug 'williamboman/nvim-lsp-installer'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'

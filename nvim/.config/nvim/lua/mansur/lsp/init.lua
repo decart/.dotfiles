@@ -1,3 +1,4 @@
+require('mansur.lsp.install')
 require('mansur/lsp/lsp-installer')
 
 local signs = {
