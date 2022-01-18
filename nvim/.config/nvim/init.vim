@@ -135,4 +135,6 @@ nnoremap <silent>    <C-w> :BufferClose<CR>
 
 let g:user_emmet_mode='v'
 let g:user_emmet_expandabbr_key = '<C-e>'
+
 lua require('mansur')
+
