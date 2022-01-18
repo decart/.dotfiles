@@ -1,5 +1,5 @@
 local lsp_installer_servers = require('nvim-lsp-installer.servers')
-local servers = { 'pyright', 'tsserver', 'jsonls', 'html', 'cssls', 'sumneko_lua', 'phpactor', 'vimls', 'vuels' }
+local servers = { 'pyright', 'tsserver', 'jsonls', 'html', 'cssls', 'sumneko_lua', 'phpactor', 'vimls', 'vuels', 'emmet_ls' }
 
 local function install_server(server)
   local server_available, requested_server = lsp_installer_servers.get_server(server)
