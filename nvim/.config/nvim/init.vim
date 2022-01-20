@@ -115,7 +115,7 @@ nnoremap s :HopChar1<CR>
 
 nnoremap <leader>q :qa<CR>
 nnoremap <leader><S-q> :qa!<CR>
-nnoremap <C-s> :w<CR>
+noremap  <C-s> <ESC>:w<CR>
 nnoremap <C-\> :vsplit %<CR>
 nnoremap <F5> :set list!<CR>
 
@@ -132,6 +132,7 @@ nnoremap <silent>    <A->> :BufferMoveNext<CR>
 
 " Close buffer
 nnoremap <silent>    <C-w> :BufferClose<CR>
+noremap  <silent>    <A-o> :b#<CR>
 
 let g:user_emmet_mode='ivn'
 let g:user_emmet_expandabbr_key = '<C-e>'
