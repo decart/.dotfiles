@@ -93,6 +93,7 @@ Plug 'numToStr/Comment.nvim'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -113,9 +114,10 @@ nnoremap <leader>n :NvimTreeFindFile<CR>
 
 nnoremap s :HopChar1<CR>
 
+noremap  <C-s> <ESC>:w<CR>
+inoremap <C-s> <esc>:w<cr>
 nnoremap <leader>q :qa<CR>
 nnoremap <leader><S-q> :qa!<CR>
-noremap  <C-s> <ESC>:w<CR>
 nnoremap <C-\> :vsplit %<CR>
 nnoremap <F5> :set list!<CR>
 
@@ -136,6 +138,8 @@ noremap  <silent>    <A-o> :b#<CR>
 
 let g:user_emmet_mode='ivn'
 let g:user_emmet_expandabbr_key = '<C-e>'
+let g:surround_no_insert_mappings = 1
+
 
 lua require('mansur')
 
