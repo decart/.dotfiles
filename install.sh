@@ -17,16 +17,11 @@ nix-channel --update
 nix-env -iA \
     nixpkgs.zsh \
     nixpkgs.antibody \
-    nixpkgs.git \
     nixpkgs.tmux \
-    nixpkgs.stow \
     nixpkgs.fzf \
     nixpkgs.peco \
-    nixpkgs.ripgrep \
     nixpkgs.fd \
     nixpkgs.bat \
-    nixpkgs.curl \
-    nixpkgs.python39Full \
     nixpkgs.direnv
 
 # Install gitui

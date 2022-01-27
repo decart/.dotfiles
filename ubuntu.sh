@@ -5,6 +5,11 @@ sudo apt install llvm clang build-essential
 
 # Install server
 sudo apt -y install \
+  git \
+  ripgrep \
+  fd \
+  stow \
+  python3.9-full \
   nginx \
   mariadb-server \
   mariadb-client \
