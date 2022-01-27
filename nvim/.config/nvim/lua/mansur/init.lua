@@ -11,4 +11,5 @@ require('mansur/floaterm')
 require('mansur/comment')
 require('mansur/hop')
 require('mansur/treesitter')
+require('mansur/registers')
 

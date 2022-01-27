@@ -76,6 +76,7 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'mhinz/vim-startify'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'phaazon/hop.nvim'
+Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 
 " Laguages
 Plug 'neovim/nvim-lspconfig'
