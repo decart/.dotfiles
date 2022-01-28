@@ -7,7 +7,7 @@ sudo apt -y install llvm clang build-essential
 sudo apt -y install \
   git \
   ripgrep \
-  fd \
+  fd-find \
   stow \
   python3.9-full \
   nginx \
