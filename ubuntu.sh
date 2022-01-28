@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt install llvm clang build-essential
+sudo apt -y install llvm clang build-essential
 
 # Install server
 sudo apt -y install \
