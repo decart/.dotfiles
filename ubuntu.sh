@@ -5,6 +5,8 @@ sudo apt -y install llvm clang build-essential
 
 # Install server
 sudo apt -y install \
+  zip \
+  unzip \
   git \
   ripgrep \
   fd-find \
