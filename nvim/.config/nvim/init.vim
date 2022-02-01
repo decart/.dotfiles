@@ -20,7 +20,7 @@ set mouse=a
 set ignorecase
 set smartcase
 set noshowmode
-set signcolumn=auto:2
+set signcolumn=yes:2
 set clipboard=unnamedplus
 set listchars=lead:·,tab:▷ ,trail:·,extends:◣,precedes:◢,nbsp:○
 set list
