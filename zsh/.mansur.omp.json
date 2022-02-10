@@ -2,101 +2,101 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
-      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "type": "root",
-          "style": "plain",
           "foreground": "#E06C75",
           "properties": {
             "root_icon": "root",
-            "prefix": "",
-            "postfix": " <#ffffff>in</> "
-          }
+            "template": "\uf0e7 <#ffffff>in</> "
+          },
+          "style": "plain",
+          "type": "root"
         },
         {
-          "type": "path",
-          "style": "plain",
           "foreground": "#55B9C4",
           "properties": {
+            "mixed_threshold": 10,
             "style": "mixed",
-            "prefix": "",
-            "mixed_threshold": 10
-          }
+            "template": "{{ .Path }} "
+          },
+          "style": "plain",
+          "type": "path"
         },
         {
-          "type": "git",
-          "style": "plain",
           "foreground": "#C678DD",
           "properties": {
-            "prefix": "<#ffffff>on</> ",
-            "display_status": true
-          }
+            "fetch_status": true,
+            "template": "<#ffffff>on</> {{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}} \uf692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} "
+          },
+          "style": "plain",
+          "type": "git"
         },
         {
-          "type": "php",
-          "style": "plain",
           "foreground": "#6b81ff",
           "properties": {
-            "display_version": true,
-            "prefix": "\uE608 "
-          }
+            "fetch_version": true,
+            "template": "\ue608 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+          },
+          "style": "plain",
+          "type": "php"
         },
         {
-          "type": "node",
-          "style": "plain",
           "foreground": "#98C379",
+          "foreground_templates": [
+            "{{ if .Mismatch }}#f00000{{ end }}"
+          ],
           "properties": {
-            "display_version": true,
-            "enable_version_mismatch": true,
-            "version_mismatch_color": "#f00000",
-            "prefix": " \uE781 "
-          }
+            "fetch_version": true,
+            "template": " \ue781 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} "
+          },
+          "style": "plain",
+          "type": "node"
         },
         {
-          "type": "python",
-          "style": "plain",
           "foreground": "#55B9C4",
           "properties": {
-            "display_version": false,
-            "prefix": " \uE235 "
-          }
+            "fetch_version": false,
+            "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} "
+          },
+          "style": "plain",
+          "type": "python"
         },
         {
-          "type": "executiontime",
-          "style": "plain",
           "foreground": "#aaaaaa",
           "properties": {
             "style": "round",
-            "prefix": " <#6b81ff>\ufbab</> "
-          }
+            "template": " <#6b81ff>\ufbab</> {{ .FormattedMs }} "
+          },
+          "style": "plain",
+          "type": "executiontime"
         },
         {
-          "type": "exit",
-          "style": "plain",
           "foreground": "#C94A16",
           "properties": {
-            "prefix": "\uf06a "
-          }
+            "template": "\uf06a {{ if gt .Code 0 }}\uf00d {{ .Meaning }}{{ else }}\uf42e{{ end }} "
+          },
+          "style": "plain",
+          "type": "exit"
         }
-      ]
+      ],
+      "type": "prompt"
     },
     {
-      "type": "prompt",
       "alignment": "left",
       "newline": true,
       "segments": [
         {
-          "type": "text",
-          "style": "plain",
           "foreground": "#63F08C",
           "properties": {
-            "prefix": "",
-            "text": "\u279C"
-          }
+            "template": "\u279c "
+          },
+          "style": "plain",
+          "type": "text"
         }
-      ]
+      ],
+      "type": "prompt"
     }
-  ]
+  ],
+  "version": 1
 }
