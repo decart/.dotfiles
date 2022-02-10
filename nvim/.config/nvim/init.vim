@@ -108,10 +108,12 @@ let mapleader = " "
 noremap <C-p> :Telescope find_files<CR>
 noremap <C-f> :Telescope live_grep<CR>
 
-nnoremap <C-h> <C-w><C-h>
-nnoremap <C-j> <C-w><C-j>
-nnoremap <C-k> <C-w><C-k>
-nnoremap <C-l> <C-w><C-l>
+nnoremap <leader>h <C-w><C-h>
+nnoremap <leader>j <C-w><C-j>
+nnoremap <leader>k <C-w><C-k>
+nnoremap <leader>l <C-w><C-l>
+nnoremap <C-j> 20j
+noremap <C-k> 20k
 
 nnoremap <C-b> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
@@ -143,7 +145,11 @@ noremap  <silent>    <A-o> :b#<CR>
 
 let g:user_emmet_mode='ivn'
 let g:user_emmet_expandabbr_key = '<C-e>'
+
 let g:surround_no_insert_mappings = 1
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-d>'
+let g:multi_cursor_quit_key='<Esc>'
 
 
 lua require('mansur')
