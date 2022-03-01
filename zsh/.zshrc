@@ -71,3 +71,7 @@ if [ -d ~/.config/composer/vendor/bin ]; then
   export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 fi
 
+if [ -d /usr/local/go/bin ]; then
+  export PATH="/usr/local/go/bin:$PATH"
+  export PATH="$(go env GOPATH)/bin:$PATH"
+fi
