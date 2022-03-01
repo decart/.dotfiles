@@ -113,7 +113,8 @@ nnoremap <leader>j <C-w><C-j>
 nnoremap <leader>k <C-w><C-k>
 nnoremap <leader>l <C-w><C-l>
 nnoremap <C-j> 20j
-noremap <C-k> 20k
+nnoremap <C-k> 20k
+nnoremap vv ^vg_
 
 nnoremap <C-b> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
