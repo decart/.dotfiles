@@ -9,7 +9,7 @@ ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 ZSH_PECO_HISTORY_OPTS="--layout=bottom-up --initial-filter=Fuzzy"
 
-bindkey '	' autosuggest-accept
+bindkey '^ ' autosuggest-accept
 bindkey '^[j' forward-word
 bindkey '^[k' backward-delete-word
 bindkey  "^[[H"   beginning-of-line
