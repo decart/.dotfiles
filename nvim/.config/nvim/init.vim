@@ -61,6 +61,7 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'voldikss/vim-floaterm'
+Plug 'terryma/vim-expand-region'
 
 " Color theme
 Plug 'gruvbox-community/gruvbox'
@@ -115,6 +116,8 @@ nnoremap <leader>l <C-w><C-l>
 nnoremap <C-j> 20j
 nnoremap <C-k> 20k
 nnoremap vv ^vg_
+vnoremap K <Plug>(expand_region_expand)
+vnoremap J <Plug>(expand_region_shrink)
 
 nnoremap <C-b> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
@@ -152,6 +155,18 @@ let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key='<C-d>'
 let g:multi_cursor_quit_key='<Esc>'
 
+let g:expand_region_text_objects = get(g:, 'expand_region_text_objects', {
+          \ 'iw'  :0,
+          \ 'iW'  :0,
+          \ 'i"'  :1,
+          \ 'i''' :1,
+          \ 'i]'  :1,
+          \ 'ib'  :1,
+          \ 'iB'  :1,
+          \ 'il'  :0,
+          \ 'ip'  :0,
+          \ 'ie'  :0,
+          \})
 
 lua require('mansur')
 
