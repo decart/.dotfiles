@@ -64,7 +64,7 @@ if [ -s "$NVM_DIR/nvm.sh" ]; then
 fi
 
 if [ -s ~/.mansur.omp.json ]; then
-  eval "$(oh-my-posh --init --shell zsh --config ~/.mansur.omp.json)"
+  eval "$(oh-my-posh prompt init zsh --config ~/.mansur.omp.json)"
 fi
 
 if [ -d ~/.config/composer/vendor/bin ]; then
