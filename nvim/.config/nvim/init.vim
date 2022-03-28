@@ -75,6 +75,7 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'APZelos/blamer.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'romgrk/barbar.nvim'
 Plug 'glepnir/dashboard-nvim'
@@ -149,6 +150,8 @@ noremap  <silent>    <A-o> :b#<CR>
 
 let g:user_emmet_mode='ivn'
 let g:user_emmet_expandabbr_key = '<C-e>'
+
+let g:blamer_enabled = 1
 
 let g:surround_no_insert_mappings = 1
 let g:multi_cursor_use_default_mapping=0
