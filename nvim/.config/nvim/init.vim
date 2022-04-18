@@ -134,8 +134,10 @@ nnoremap <C-\> :vsplit %<CR>
 nnoremap <F5> :set list!<CR>
 
 " Shift/unshift selected lines
-vnoremap <Tab> >gv
-vnoremap <S-Tab> <gv
+vnoremap <silent> <Tab> >gv
+vnoremap <silent> <S-Tab> <gv
+vnoremap <silent> > >gv
+vnoremap <silent> < <gv
 
 " Move to previous/next tab
 nnoremap <silent>    <A-,> :BufferPrevious<CR>
