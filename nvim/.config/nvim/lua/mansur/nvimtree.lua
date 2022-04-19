@@ -1,14 +1,19 @@
-local tree_cb = require('nvim-tree.config').nvim_tree_callback
-
 require('nvim-tree').setup {
   view = {
-    auto_resize = true,
+    width = 35,
     mappings = {
       list = {
-        { key = "<C-q>", cb = tree_cb("vsplit") }
+        { key = "<C-q>", action = "vsplit" }
       }
+    }
+  },
+  renderer = {
+    indent_markers = { enable = true }
+  },
+  actions = {
+    open_file = {
+      resize_window = true
     }
   }
 }
 
-vim.g.nvim_tree_indent_markers = 1
