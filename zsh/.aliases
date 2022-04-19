@@ -11,6 +11,12 @@ alias html="cd ~/data/html"
 alias js="cd ~/data/javascript"
 alias tmp='cd ~/data/temp'
 
+# Server
+alias snginx="sudo service nginx start"
+alias sphp="sudo service php7.4-fpm start && sudo service php8.0-fpm start && sudo service php8.1-fpm start"
+alias smysql="sudo service mysql start"
+alias smhog="MailHog -ui-bind-addr 127.0.0.1:8085 -smtp-bind-addr 127.0.0.1:1025"
+
 # Files list
 alias l="ls --group-directories-first -lFh"
 alias lS="ls --group-directories-first -1FSsh"
@@ -27,8 +33,17 @@ alias lt="ls --group-directories-first -ltFh"
 alias vim="nvim"
 alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
 alias rg="rg -i -p"
-alias dh="dirs -v" # Directory history
 alias art="php artisan"
+alias d="dirs -v | head -10" # Directory history
+alias 1='cd -'
+alias 2='cd -2'
+alias 3='cd -3'
+alias 4='cd -4'
+alias 5='cd -5'
+alias 6='cd -6'
+alias 7='cd -7'
+alias 8='cd -8'
+alias 9='cd -9'
 
 alias sail='./vendor/bin/sail'
 alias artdb='art migrate:reset && art migrate && art db:seed && art ide-helper:model -RW'
