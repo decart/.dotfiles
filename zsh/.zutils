@@ -1,5 +1,13 @@
 function exists { which $1 &> /dev/null }
 
+function html {
+  cd "$HOME/data/html/$1"
+}
+
+function js {
+  cd "$HOME/data/javascript/$1"
+}
+
 function ss {
   sudo service $1 start
 }

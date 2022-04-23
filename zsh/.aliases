@@ -6,9 +6,6 @@ alias ea="$EDITOR $HOME/.aliases"
 alias sc="source $HOME/.zshrc"
 
 # navigation aliases
-alias dev="cd ~/dev"
-alias html="cd ~/data/html"
-alias js="cd ~/data/javascript"
 alias tmp='cd ~/data/temp'
 
 # Server
