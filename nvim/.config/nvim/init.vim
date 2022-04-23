@@ -66,6 +66,7 @@ Plug 'akinsho/toggleterm.nvim'
 " Color theme
 Plug 'gruvbox-community/gruvbox'
 Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
