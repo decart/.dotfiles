@@ -60,8 +60,8 @@ endif
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'voldikss/vim-floaterm'
 Plug 'terryma/vim-expand-region'
+Plug 'akinsho/toggleterm.nvim'
 
 " Color theme
 Plug 'gruvbox-community/gruvbox'
