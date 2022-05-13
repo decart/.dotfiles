@@ -4,9 +4,21 @@ function html {
   cd "$HOME/data/html/$1"
 }
 
+function _html {
+  _alternative 'dirs:list of projects:($(ls -l $HOME/data/html/ | grep "^d" | awk "{print \$9}"))'
+}
+
+compdef _html html
+
 function js {
   cd "$HOME/data/javascript/$1"
 }
+
+function _js {
+  _alternative 'dirs:list of projects:($(ls -l $HOME/data/javascript/ | grep "^d" | awk "{print \$9}"))'
+}
+
+compdef _js js
 
 function ss {
   sudo service $1 start
