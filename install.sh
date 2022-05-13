@@ -60,6 +60,14 @@ chmod +x bin/*
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
 sudo chmod +x /usr/local/bin/oh-my-posh
 
+# Lazygit
+wget  https://github.com/jesseduffield/lazygit/releases/download/v0.34/lazygit_0.34_Linux_x86_64.tar.gz
+tar -xf lazygit_0.34_Linux_x86_64.tar.gz
+rm lazygit_0.34_Linux_x86_64.tar.gz
+rm LICENSE
+rm README.md
+sudo mv lazygit /usr/local/bin/lazygit
+
 ###############
 ## CONFIG OS ##
 ###############
