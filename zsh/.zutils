@@ -1,3 +1,5 @@
+# vim: syntax=bash
+
 function exists { which $1 &> /dev/null }
 
 function html {
@@ -63,27 +65,31 @@ function penv {
     fi
 }
 
-if exists peco; then
-    function peco_dev {
-        local dev_dirs_list=("${(@s/:/)DEV_DIRS}")
-        local all_dev_dirs
-        local tac
+function _fzf_dev {
+  local dev_dirs_list=("${(@s/:/)DEV_DIRS}")
+  local all_dev_dirs
 
-        for d in $dev_dirs_list; do
-            all_dev_dirs+="$(ls -1hd $d/*)\n"
-        done
+  for d in $dev_dirs_list; do
+    all_dev_dirs+="$(fdfind -d1 -td . $d)\n"
+  done
 
-        selected_dir=$(echo $all_dev_dirs | peco --query "$LBUFFER")
+  selected_dir=$(echo $all_dev_dirs | \
+    fzf --preview 'tree {}' \
+        --border=rounded \
+        --margin=2,16 \
+        --prompt="Projects > " \
+        --pointer=▶ \
+        -1 \
+        --query "$LBUFFER")
 
-        if [ -n "$selected_dir" ]; then
-            BUFFER="cd $selected_dir"
-            zle accept-line
-        fi
-    }
+  if [ -n "$selected_dir" ]; then
+      BUFFER="cd $selected_dir"
+      zle accept-line
+  fi
+}
 
-    zle -N peco_dev
-    bindkey '^F' peco_dev
-fi
+zle -N _fzf_dev
+bindkey '^F' _fzf_dev
 
 function iapt() {
     if [ -z "$1" ]; then
