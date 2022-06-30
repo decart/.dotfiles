@@ -35,6 +35,9 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 sudo mv nvim.appimage /usr/local/bin/nvim
 
+# Install poetry
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
+
 if [[ $(lsb_release -is) == "Ubuntu" ]]; then
   source ubuntu.sh
 else
