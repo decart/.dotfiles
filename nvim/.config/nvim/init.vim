@@ -84,6 +84,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'phaazon/hop.nvim'
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 Plug 'rhysd/git-messenger.vim'
+Plug 'windwp/nvim-autopairs'
 
 " Laguages
 Plug 'neovim/nvim-lspconfig'

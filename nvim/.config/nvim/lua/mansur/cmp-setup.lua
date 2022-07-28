@@ -1,6 +1,7 @@
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 local luasnip = require('luasnip')
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 
 vim.o.completeopt = 'menuone,noselect'
 
@@ -73,4 +74,11 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
+
+
+-- Insert `(` after select function or method item
+cmp.event:on(
+  'confirm_done',
+  cmp_autopairs.on_confirm_done()
+)
 

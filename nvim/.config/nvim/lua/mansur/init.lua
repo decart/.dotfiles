@@ -13,4 +13,5 @@ require('mansur/treesitter')
 require('mansur/registers')
 require('mansur/toggleterm')
 require('mansur/indent-blankline')
+require('mansur/autopairs')
 
