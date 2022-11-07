@@ -43,6 +43,7 @@ alias 7='cd -7'
 alias 8='cd -8'
 alias 9='cd -9'
 
+alias grp='git remote prune origin'
 alias sail='./vendor/bin/sail'
 alias artdb='art migrate:reset && art migrate && art db:seed && art ide-helper:model -RW'
 alias rcp='rsync -rzv'
