@@ -1,3 +1,4 @@
+require('mansur/clipboard')
 require('mansur/highlight')
 require('mansur/telescope')
 require('mansur/lualine')

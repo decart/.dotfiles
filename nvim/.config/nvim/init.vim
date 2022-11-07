@@ -41,6 +41,8 @@ augroup CursorLine
   autocmd BufLeave,FocusLost,WinLeave   * set nocursorline
 augroup END
 
+au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=150}
+
 " *****************************************************************************
 " Vim-PLug core
 " *****************************************************************************
