@@ -111,3 +111,6 @@ nix-env -iA \
     nixpkgs.php81Extensions.mbstring \
     nixpkgs.php81Extensions.memcached 
 
+# Utils
+nix-env -iA \
+  nixpkgs.exa
