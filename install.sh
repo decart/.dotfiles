@@ -30,6 +30,12 @@ sudo tar -zxf gitui-linux-musl.tar.gz --directory /usr/local/bin
 sudo chmod +x /usr/local/bin/gitui
 rm -f gitui-linux-musl.tar.gz
 
+# Install exa
+EXA_VERSION=$(curl -s "https://api.github.com/repos/ogham/exa/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+curl -Lo exa.zip "https://github.com/ogham/exa/releases/latest/download/exa-linux-x86_64-v${EXA_VERSION}.zip"
+sudo unzip -q exa.zip bin/exa -d /usr/local
+rm -rf exa.zip
+
 # Install neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
