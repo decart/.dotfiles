@@ -24,6 +24,12 @@ nix-env -iA \
     nixpkgs.bat \
     nixpkgs.direnv
 
+# Install lazygit
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep '"tag_name":' |  sed -E 's/.*"v*([^"]+)".*/\1/')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
+rm -f lazygit.tar.gz
+
 # Install gitui
 curl -LO https://github.com/extrawurst/gitui/releases/latest/download/gitui-linux-musl.tar.gz
 sudo tar -zxf gitui-linux-musl.tar.gz --directory /usr/local/bin
@@ -68,14 +74,6 @@ chmod +x bin/*
 # Oh My Posh
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
 sudo chmod +x /usr/local/bin/oh-my-posh
-
-# Lazygit
-wget  https://github.com/jesseduffield/lazygit/releases/download/v0.34/lazygit_0.34_Linux_x86_64.tar.gz
-tar -xf lazygit_0.34_Linux_x86_64.tar.gz
-rm lazygit_0.34_Linux_x86_64.tar.gz
-rm LICENSE
-rm README.md
-sudo mv lazygit /usr/local/bin/lazygit
 
 ###############
 ## CONFIG OS ##
