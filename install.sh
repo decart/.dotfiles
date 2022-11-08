@@ -43,9 +43,9 @@ sudo unzip -q exa.zip bin/exa -d /usr/local
 rm -rf exa.zip
 
 # Install neovim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-sudo mv nvim.appimage /usr/local/bin/nvim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.deb
+sudo dpkg -i nvim-linux64.deb
+rm -f nvim-linux64.deb
 
 # Install poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
