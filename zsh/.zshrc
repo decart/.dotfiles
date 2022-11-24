@@ -76,4 +76,4 @@ if [ -d /usr/local/go/bin ]; then
   export PATH="$(go env GOPATH)/bin:$PATH"
 fi
 
-export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.poetry/bin:$PATH"
