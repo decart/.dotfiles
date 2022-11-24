@@ -8,10 +8,6 @@ require('telescope').setup {
       '--line-number',
       '--column',
       '--smart-case',
-      '-u' -- thats the new thing
-    },
-    file_ignore_patterns = {
-      "node_modules", ".git"
     },
   },
   extensions = {
