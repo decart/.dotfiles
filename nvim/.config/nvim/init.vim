@@ -64,6 +64,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'terryma/vim-expand-region'
 Plug 'akinsho/toggleterm.nvim'
+Plug 'lambdalisue/suda.vim'
 
 " Color theme
 Plug 'gruvbox-community/gruvbox'
@@ -164,6 +165,8 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " Git
 nmap <Leader>m <Plug>(git-messenger)
+
+let g:suda_smart_edit = 1
 
 let g:user_emmet_mode='ivn'
 let g:user_emmet_expandabbr_key = '<C-e>'
