@@ -4,6 +4,9 @@
 ## INSTALL PACKAGES ##
 ######################
 
+# Install Linux headers
+sudo apt install linux-headers-$(uname -r)
+
 # Install nix package manager
 curl -L https://nixos.org/nix/install | sh
 
