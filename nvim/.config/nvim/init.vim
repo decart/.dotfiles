@@ -66,6 +66,9 @@ Plug 'terryma/vim-expand-region'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'lambdalisue/suda.vim'
 
+" UI
+Plug 'MunifTanjim/nui.nvim'
+
 " Color theme
 Plug 'gruvbox-community/gruvbox'
 Plug 'kristijanhusak/vim-hybrid-material'
@@ -79,7 +82,8 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
 Plug 'lewis6991/gitsigns.nvim'
-Plug 'kyazdani42/nvim-tree.lua'
+" Plug 'kyazdani42/nvim-tree.lua' " Tree view
+Plug 'nvim-neo-tree/neo-tree.nvim' " Tree view
 Plug 'romgrk/barbar.nvim'
 Plug 'glepnir/dashboard-nvim'
 Plug 'mhinz/vim-startify'
@@ -109,6 +113,7 @@ Plug 'tpope/vim-surround'
 
 call plug#end()
 
+
 nnoremap <Space> <Nop>
 let mapleader = " "
 
@@ -125,9 +130,11 @@ nnoremap vv ^vg_
 vnoremap K <Plug>(expand_region_expand)
 vnoremap J <Plug>(expand_region_shrink)
 
-nnoremap <C-b> :NvimTreeToggle<CR>
-nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
+" Tree view
+nnoremap <C-b> :Neotree reveal<cr>
+" nnoremap <C-b> :NvimTreeToggle<CR>
+" nnoremap <leader>r :NvimTreeRefresh<CR>
+" nnoremap <leader>n :NvimTreeFindFile<CR>
 
 nnoremap s :HopChar1<CR>
 

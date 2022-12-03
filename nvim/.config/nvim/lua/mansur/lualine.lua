@@ -25,6 +25,7 @@ require('lualine').setup {
   },
   tabline = {},
   extensions = {
-    'nvim-tree'
+    'nvim-tree',
+    'neo-tree'
   }
 }
