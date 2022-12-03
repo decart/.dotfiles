@@ -16,7 +16,7 @@ set splitright
 set hidden
 set scrolloff=8
 set undofile
-set mouse=a
+set mouse=
 set ignorecase
 set smartcase
 set noshowmode
