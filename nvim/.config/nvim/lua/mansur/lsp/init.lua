@@ -15,7 +15,8 @@ end
 
 local config = {
   -- disable virtual text
-  virtual_text = false,
+  -- virtual_text = false,
+  virtual_text = { prefix = '•' },
   signs = { active = signs },
   update_in_insert = true,
   underline = true,

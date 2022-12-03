@@ -17,3 +17,7 @@ vim.cmd('hi BufferInactiveMod guibg=' .. bgInactive)
 vim.cmd('hi BufferVisible guibg=' .. bgInactive)
 vim.cmd('hi BufferVisibleSign guibg=' .. bgInactive)
 vim.cmd('hi BufferVisibleMod guibg=' .. bgInactive)
+
+vim.cmd('hi DiagnosticHint guifg=#666666')
+vim.cmd('hi DiagnosticError guifg=#F44336')
+vim.cmd('hi DiagnosticWarn guifg=#b27300')
