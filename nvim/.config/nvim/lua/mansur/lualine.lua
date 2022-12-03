@@ -26,6 +26,7 @@ require('lualine').setup {
   tabline = {},
   extensions = {
     'nvim-tree',
-    'neo-tree'
+    'neo-tree',
+    'toggleterm'
   }
 }
