@@ -24,7 +24,7 @@ wk.register({
     a = { function () vim.lsp.buf.code_action() end, 'Code action' },
     h = { function () vim.lsp.buf.signature_help() end, 'Signature help' },
     d = { function () vim.diagnostic.open_float() end, 'Diagnostic float' },
-    f = { function () vim.lsp.buf.formatting() end, 'Format code' },
+    f = { function () vim.lsp.buf.format({ async = true, timeout_ms = 2000 }) end, 'Format code' },
   },
   g = {
     name = 'Git',

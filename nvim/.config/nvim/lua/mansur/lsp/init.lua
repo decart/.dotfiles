@@ -1,6 +1,6 @@
 require('mansur.lsp.install')
 require('mansur/lsp/lsp-installer')
-require("null-ls").setup()
+require('mansur.lsp.null-ls')
 
 local signs = {
   { name = "DiagnosticSignError", text = "" },
@@ -42,6 +42,6 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 })
 
 -- Format on save
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format({ timeout_ms = 2000 })]]
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format({ async = false, timeout_ms = 2000 })]]
 
-require('mansur.lsp.eslint-config')
+-- require('mansur.lsp.eslint-config')

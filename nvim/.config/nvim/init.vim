@@ -96,7 +96,7 @@ Plug 'windwp/nvim-autopairs'
 " Laguages
 Plug 'neovim/nvim-lspconfig'
 Plug 'jose-elias-alvarez/null-ls.nvim'
-Plug 'MunifTanjim/eslint.nvim'
+" Plug 'MunifTanjim/eslint.nvim'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'hrsh7th/nvim-cmp'
