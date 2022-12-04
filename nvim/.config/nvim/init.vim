@@ -122,12 +122,10 @@ let mapleader = " "
 noremap <C-p> :Telescope find_files<CR>
 noremap <C-f> :Telescope live_grep<CR>
 
-nnoremap <leader>h <C-w><C-h>
-nnoremap <leader>j <C-w><C-j>
-nnoremap <leader>k <C-w><C-k>
-nnoremap <leader>l <C-w><C-l>
-nnoremap <C-j> 20j
-nnoremap <C-k> 20k
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
 nnoremap vv ^vg_
 vnoremap K <Plug>(expand_region_expand)
 vnoremap J <Plug>(expand_region_shrink)
@@ -182,7 +180,7 @@ let g:user_emmet_expandabbr_key = '<C-e>'
 
 let g:surround_no_insert_mappings = 1
 let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key='<C-d>'
+let g:multi_cursor_next_key='<A-d>'
 let g:multi_cursor_quit_key='<Esc>'
 
 let g:expand_region_text_objects = get(g:, 'expand_region_text_objects', {
