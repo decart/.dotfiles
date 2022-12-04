@@ -113,14 +113,13 @@ Plug 'windwp/nvim-ts-autotag'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 
+Plug 'folke/which-key.nvim'
+
 call plug#end()
 
 
 nnoremap <Space> <Nop>
 let mapleader = " "
-
-noremap <C-p> :Telescope find_files<CR>
-noremap <C-f> :Telescope live_grep<CR>
 
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-j> :wincmd j<CR>
@@ -140,7 +139,6 @@ nnoremap s :HopChar1<CR>
 
 noremap  <C-s> <ESC>:w<CR>
 inoremap <C-s> <esc>:w<cr>
-nnoremap <leader>q :qa<CR>
 nnoremap <leader><S-q> :qa!<CR>
 nnoremap <C-\> :vsplit %<CR>
 nnoremap <F5> :set list!<CR>
@@ -169,9 +167,6 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
-
-" Git
-nmap <Leader>m <Plug>(git-messenger)
 
 let g:suda_smart_edit = 1
 
