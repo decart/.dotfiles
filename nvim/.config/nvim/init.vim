@@ -87,7 +87,7 @@ Plug 'nvim-neo-tree/neo-tree.nvim' " Tree view
 Plug 'romgrk/barbar.nvim'
 Plug 'glepnir/dashboard-nvim'
 Plug 'mhinz/vim-startify'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi'
 Plug 'phaazon/hop.nvim'
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 Plug 'rhysd/git-messenger.vim'
@@ -96,7 +96,6 @@ Plug 'windwp/nvim-autopairs'
 " Laguages
 Plug 'neovim/nvim-lspconfig'
 Plug 'jose-elias-alvarez/null-ls.nvim'
-" Plug 'MunifTanjim/eslint.nvim'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'hrsh7th/nvim-cmp'
@@ -118,65 +117,20 @@ Plug 'folke/which-key.nvim'
 call plug#end()
 
 
-nnoremap <Space> <Nop>
-let mapleader = " "
+let g:VM_default_mappings = 0
+let g:VM_maps = {}
+let g:VM_maps["Add Cursor Down"]             = '<C-A-Down>'
+let g:VM_maps["Add Cursor Up"]               = '<C-A-Up>'
+let g:VM_maps['Find Under']                  = '<C-n>'
+let g:VM_maps['Find Subword Under']          = '<C-n>'
+let g:VM_maps["Skip Region"]                 = 'q'
 
-nmap <silent> <C-k> :wincmd k<CR>
-nmap <silent> <C-j> :wincmd j<CR>
-nmap <silent> <C-h> :wincmd h<CR>
-nmap <silent> <C-l> :wincmd l<CR>
-nnoremap vv ^vg_
-vnoremap K <Plug>(expand_region_expand)
-vnoremap J <Plug>(expand_region_shrink)
-
-" Tree view
-nnoremap <C-b> :Neotree reveal<cr>
-" nnoremap <C-b> :NvimTreeToggle<CR>
-" nnoremap <leader>r :NvimTreeRefresh<CR>
-" nnoremap <leader>n :NvimTreeFindFile<CR>
-
-nnoremap s :HopChar1<CR>
-
-noremap  <C-s> <ESC>:w<CR>
-inoremap <C-s> <esc>:w<cr>
-nnoremap <leader><S-q> :qa!<CR>
-nnoremap <C-\> :vsplit %<CR>
-nnoremap <F5> :set list!<CR>
-
-" Shift/unshift selected lines
-vnoremap <silent> <Tab> >gv
-vnoremap <silent> <S-Tab> <gv
-vnoremap <silent> > >gv
-vnoremap <silent> < <gv
-
-" Move to previous/next tab
-nnoremap <silent>    <A-,> :BufferPrevious<CR>
-nnoremap <silent>    <A-.> :BufferNext<CR>
-" Re-order to previous/next tab
-nnoremap <silent>    <A-<> :BufferMovePrevious<CR>
-nnoremap <silent>    <A->> :BufferMoveNext<CR>
-
-" Close buffer
-nnoremap <silent>    <C-w> :BufferClose<CR>
-noremap  <silent>    <A-o> :b#<CR>
-
-" Move lines
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
-
-let g:suda_smart_edit = 1
+let g:suda_smart_edit = 1 " Sudo write
 
 let g:user_emmet_mode='ivn'
 let g:user_emmet_expandabbr_key = '<C-e>'
 
-let g:surround_no_insert_mappings = 1
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key='<A-d>'
-let g:multi_cursor_quit_key='<Esc>'
+let g:surround_no_insert_mappings = 1 " Surround plugin - disable <C-s>
 
 let g:expand_region_text_objects = get(g:, 'expand_region_text_objects', {
           \ 'iw'  :0,
