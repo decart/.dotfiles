@@ -6,7 +6,8 @@ keymap('', '<Space>', '<Nop>')
 vim.g.mapleader = ' '
 
 -- Save by <C-s>
-keymap('', '<C-s>', '<esc>:w<cr>', opts)
+keymap('i', '<C-s>', '<esc>:w<cr>', opts)
+keymap('n', '<C-s>', '<esc>:w<cr>', opts)
 
 -- Disable yank of some commands
 keymap('n', 'x', '"_x', opts)
