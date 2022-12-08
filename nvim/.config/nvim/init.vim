@@ -82,14 +82,13 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
 Plug 'lewis6991/gitsigns.nvim'
-" Plug 'kyazdani42/nvim-tree.lua' " Tree view
+"   Plug 'kyazdani42/nvim-tree.lua' " Tree view
 Plug 'nvim-neo-tree/neo-tree.nvim' " Tree view
 Plug 'romgrk/barbar.nvim'
 Plug 'glepnir/dashboard-nvim'
 Plug 'mhinz/vim-startify'
 Plug 'mg979/vim-visual-multi'
 Plug 'phaazon/hop.nvim'
-Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
 Plug 'rhysd/git-messenger.vim'
 Plug 'windwp/nvim-autopairs'
 
