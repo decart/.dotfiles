@@ -52,7 +52,8 @@ keymap('v', 'K', '<Plug>(expand_region_expand)')
 keymap('v', 'J', '<Plug>(expand_region_shrink)')
 
 -- Neotree
-keymap('n', '<C-b>', ':Neotree toggle<cr>')
+-- keymap('n', '<C-b>', ':Neotree toggle<cr>')
+keymap('n', '<C-b>', ':NvimTreeToggle<cr>')
 
 -- HOP
 keymap('n', 's', ':HopChar1<cr>')
