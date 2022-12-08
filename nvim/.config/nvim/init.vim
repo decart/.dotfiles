@@ -87,7 +87,6 @@ Plug 'kyazdani42/nvim-tree.lua' " Tree view
 Plug 'romgrk/barbar.nvim'
 Plug 'glepnir/dashboard-nvim'
 Plug 'mhinz/vim-startify'
-Plug 'mg979/vim-visual-multi'
 Plug 'phaazon/hop.nvim'
 Plug 'rhysd/git-messenger.vim'
 Plug 'windwp/nvim-autopairs'
