@@ -1,14 +1,43 @@
 require('nvim-tree').setup {
   view = {
-    width = 35,
+    width = 40,
     mappings = {
       list = {
-        { key = "<C-q>", action = "vsplit" }
+        { key = '?', action = 'toggle_help' }
       }
     }
   },
   renderer = {
-    indent_markers = { enable = true }
+    indent_width = 1,
+    indent_markers = { enable = true },
+    highlight_git = true,
+    icons = {
+      git_placement = 'signcolumn',
+      glyphs = {
+        default = "",
+        symlink = "",
+        bookmark = "",
+        folder = {
+          arrow_closed = "",
+          arrow_open = "",
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+          symlink_open = "",
+        },
+        git = {
+          unstaged = "",
+          staged = "",
+          unmerged = "",
+          renamed = "",
+          untracked = "",
+          deleted = "",
+          ignored = "",
+        }
+      }
+    }
   },
   actions = {
     open_file = {
@@ -16,4 +45,3 @@ require('nvim-tree').setup {
     }
   }
 }
-

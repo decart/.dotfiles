@@ -1,3 +1,3 @@
 vim.g.bufferline = {
-  auto_hide = false,
+  auto_hide = true,
 }
