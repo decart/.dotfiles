@@ -19,6 +19,10 @@ keymap('v', 'x', '"_x')
 keymap('v', 'c', '"_c')
 keymap('v', 'D', '"_D')
 
+-- Move by soft wrapped lines
+keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { noremap = true, expr = true, silent = true })
+keymap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { noremap = true, expr = true, silent = true })
+
 -- Window navigation
 keymap('n', '<C-h>', ':wincmd h<cr>')
 keymap('n', '<C-j>', ':wincmd j<cr>')
