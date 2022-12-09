@@ -7,6 +7,5 @@ null_ls.setup({
   sources = {
     diag.eslint,
     format.eslint,
-    diag.jshint,
   }
 })
