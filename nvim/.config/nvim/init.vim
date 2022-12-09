@@ -28,6 +28,8 @@ set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
     " \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
     " \,sm:block-blinkwait175-blinkoff150-blinkon175
 
+set guifont=Hack\ NF:h11
+
 
 augroup numbertoggle
   autocmd!
@@ -116,6 +118,7 @@ Plug 'folke/which-key.nvim'
 
 call plug#end()
 
+let g:neovide_cursor_animation_length=0.05
 
 let g:VM_default_mappings = 0
 let g:VM_maps = {}
