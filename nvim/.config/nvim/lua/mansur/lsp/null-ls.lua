@@ -6,6 +6,7 @@ local diag = null_ls.builtins.diagnostics
 null_ls.setup({
   sources = {
     diag.eslint,
-    format.eslint
+    format.eslint,
+    diag.jshint,
   }
 })
