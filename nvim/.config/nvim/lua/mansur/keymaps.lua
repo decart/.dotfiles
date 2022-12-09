@@ -31,6 +31,10 @@ keymap('n', '<C-Down>', ':resize +2<cr>')
 keymap('n', '<C-\\>', ':vsplit %<cr>')
 keymap('n', '<A-\\>', ':split %<cr>')
 
+-- Telescope
+keymap('n', '<C-p>', ':Telescope find_files<cr>')
+keymap('n', '<C-f>', ':Telescope live_grep<cr>')
+
 -- Buffer navigation
 keymap('n', '<A-o>', ':buffer #<cr>')
 keymap('n', '<A-,>', ':BufferPrevious<cr>') -- Plugin barbar.nvim
