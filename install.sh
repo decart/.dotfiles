@@ -20,12 +20,15 @@ nix-channel --update
 nix-env -iA \
     nixpkgs.zsh \
     nixpkgs.antibody \
-    nixpkgs.tmux \
     nixpkgs.fzf \
     nixpkgs.peco \
     nixpkgs.fd \
     nixpkgs.bat \
     nixpkgs.direnv
+
+# Install tmux
+sudo curl -Lo /usr/local/bin/tmux https://github.com/nelsonenzo/tmux-appimage/releases/latest/download/tmux.appimage
+sudo chmod +x /usr/local/bin/tmux
 
 # Install lazygit
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep '"tag_name":' |  sed -E 's/.*"v*([^"]+)".*/\1/')
@@ -46,8 +49,8 @@ sudo unzip -q exa.zip bin/exa -d /usr/local
 rm -rf exa.zip
 
 # Install neovim
-curl -Lo /usr/local/bin/nvim https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
-chmod +x /usr/local/bin/nvim
+sudo curl -Lo /usr/local/bin/nvim https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+sudo chmod +x /usr/local/bin/nvim
 
 # Install poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -

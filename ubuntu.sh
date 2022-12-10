@@ -2,7 +2,7 @@
 
 sudo apt update
 sudo apt -y install llvm clang build-essential
-sudo apt -y install tmux
+# sudo apt -y install tmux
 
 # Install server
 sudo apt -y install \
