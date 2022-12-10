@@ -77,3 +77,8 @@ if [ -d /usr/local/go/bin ]; then
 fi
 
 export PATH="$HOME/.local/bin:$HOME/.poetry/bin:$PATH"
+
+# Autostart tmux
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
