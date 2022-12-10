@@ -116,6 +116,9 @@ Plug 'tpope/vim-surround'
 
 Plug 'folke/which-key.nvim'
 
+" Tmux
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
 
 let g:neovide_cursor_animation_length=0.05
