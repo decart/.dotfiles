@@ -13,7 +13,7 @@ local lazygit = Terminal:new({
 wk.register({
   q = { '<cmd>qa<cr>', 'Close vim' },
   Q = { '<cmd>qa!<cr>', 'Close vim without save' },
-  b = { '<cmd>BufferPick', 'Pick buffer' },
+  b = { '<cmd>BufferPick<cr>', 'Pick buffer' },
   f = {
     name = 'Find',
     f = { '<cmd>Telescope find_files<cr>', 'Find file' },
