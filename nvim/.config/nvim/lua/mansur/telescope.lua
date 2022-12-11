@@ -1,4 +1,5 @@
-require('telescope').setup {
+local telescope = require('telescope')
+telescope.setup {
   defaults = {
     vimgrep_arguments = {
       'rg',
@@ -23,5 +24,5 @@ require('telescope').setup {
   }
 }
 
-require('telescope').load_extension('fzf')
-require("telescope").load_extension("ui-select")
+telescope.load_extension('fzf')
+telescope.load_extension('ui-select')

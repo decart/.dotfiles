@@ -18,7 +18,7 @@ wk.register({
     name = 'Find',
     f = { '<cmd>Telescope find_files<cr>', 'Find file' },
     r = { '<cmd>Telescope oldfiles<cr>', 'Open recent file' },
-    g = { '<cmd>Telescope live_grep<cr>', 'Live grep' }
+    g = { '<cmd>Telescope live_grep<cr>', 'Live grep' },
   },
   l = {
     name = 'LSP',
