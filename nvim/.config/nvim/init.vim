@@ -64,6 +64,8 @@ endif
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'gpanders/editorconfig.nvim'
+
 Plug 'terryma/vim-expand-region'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'lambdalisue/suda.vim'
