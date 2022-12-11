@@ -1,4 +1,5 @@
 require('nvim-tree').setup {
+  sync_root_with_cwd = true,
   view = {
     width = 40,
     mappings = {
@@ -8,7 +9,7 @@ require('nvim-tree').setup {
     }
   },
   renderer = {
-    indent_width = 1,
+    indent_width = 2,
     indent_markers = { enable = true },
     highlight_git = true,
     icons = {
