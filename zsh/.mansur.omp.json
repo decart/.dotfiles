@@ -68,7 +68,7 @@
             "style": "round"
           },
           "style": "plain",
-          "template": " <#6b81ff>\ufbab</> {{ .FormattedMs }} ",
+          "template": " <#6b81ff>\ufa1a</>{{ .FormattedMs }} ",
           "type": "executiontime"
         },
         {
