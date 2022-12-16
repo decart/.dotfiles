@@ -1,6 +1,7 @@
 require('mansur/keymaps')
 require('mansur/clipboard')
 require('mansur/highlight')
+require('mansur.web-devicons')
 require('mansur/telescope')
 require('mansur/lualine')
 require('mansur/git-signs')
