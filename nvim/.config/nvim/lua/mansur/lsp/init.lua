@@ -42,6 +42,6 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 })
 
 -- Format on save
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format({ async = false, timeout_ms = 2000 })]]
+-- vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format({ async = false, timeout_ms = 2000 })]]
 
 -- require('mansur.lsp.eslint-config')
