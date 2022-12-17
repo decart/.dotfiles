@@ -6,7 +6,7 @@ M.map = function(mode, keybinds, command, opts)
     options = vim.tbl_extend('force', options, opts)
   end
 
-  vim.api.nvim_set_keymap(mode, keybinds, command, options)
+  vim.keymap.set(mode, keybinds, command, options)
 end
 
 M.bg = function(group, default)

@@ -1,11 +1,10 @@
-local null_ls = require('null-ls')
+require('null-ls').setup({ 'stylua', 'jq', 'eslint_d', 'blade' })
 
-local format = null_ls.builtins.formatting
-local diag = null_ls.builtins.diagnostics
-
-null_ls.setup({
-  sources = {
-    diag.eslint,
-    format.eslint,
-  }
+require('mason-null-ls').setup({
+  ensure_installed = nil,
+  automatic_installation = true,
+  automatic_setup = true
 })
+
+require('mason-null-ls').setup_handlers()
+

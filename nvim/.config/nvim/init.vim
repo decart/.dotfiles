@@ -99,9 +99,11 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'windwp/nvim-autopairs'
 
 " Laguages
-Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
-Plug 'williamboman/nvim-lsp-installer'
+Plug 'jayp0521/mason-null-ls.nvim'
+Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
