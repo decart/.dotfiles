@@ -52,7 +52,7 @@ let g:neovide_cursor_animation_length=0.05
 
 let g:suda_smart_edit = 1 " Sudo write
 
-let g:user_emmet_mode='ivn'
+let g:user_emmet_mode='a'
 let g:user_emmet_expandabbr_key = '<C-e>'
 
 let g:surround_no_insert_mappings = 1 " Surround plugin - disable <C-s>

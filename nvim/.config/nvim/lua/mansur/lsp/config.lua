@@ -8,7 +8,7 @@ local map = require('mansur.utils').map
 
 local M = {}
 
-M.servers = { 'pyright', 'tsserver', 'jsonls', 'html', 'cssls', 'sumneko_lua', 'phpactor', 'vimls', 'vuels', 'emmet_ls', 'tailwindcss' }
+M.servers = { 'pyright', 'tsserver', 'jsonls', 'html', 'cssls', 'sumneko_lua', 'phpactor', 'vimls', 'vuels', 'tailwindcss' }
 
 function M.on_attach()
   map('n', 'gD',     vim.lsp.buf.declaration)
