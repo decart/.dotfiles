@@ -46,6 +46,9 @@ alias sail='./vendor/bin/sail'
 alias artdb='art migrate:reset && art migrate && art db:seed && art ide-helper:model -RW'
 alias rcp='rsync -rzv'
 
+# Docker
+alias dc="docker-compose"
+
 # Bat
 if [ "$(command -v batcat)" ]; then
   unalias -m 'cat'
