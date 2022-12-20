@@ -46,23 +46,8 @@ function usephp {
     sudo update-alternatives --set phar.phar "/usr/bin/phar.phar$version"
 }
 
-function penv_action {
-    case $1 in
-        "create" )
-            python3 -m venv "$PYTHON_ENV_DIR/$2"
-            echo "Successfully created: $PYTHON_ENV_DIR/$2"
-        ;;
-    esac
-}
-
-function penv {
-    if [ $# -eq 0 ]; then
-        ls -l "$PYTHON_ENV_DIR" | awk '{if (length($9) > 0) print $9}' | nl -w2 -s'> '
-    elif [ $# -eq 1 ]; then
-        source $PYTHON_ENV_DIR/$1/bin/activate
-    elif [ $# -eq 2 ]; then
-        penv_action $1 $2
-    fi
+function dcshell {
+  dc exec $1 /bin/bash
 }
 
 function _fzf_dev {

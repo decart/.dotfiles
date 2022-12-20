@@ -16,6 +16,7 @@ bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
 bindkey -r '^P'
+bindkey -v
 
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle ':completion:*' expand prefix
@@ -78,7 +79,3 @@ fi
 
 export PATH="$HOME/.local/bin:$HOME/.poetry/bin:$PATH"
 
-# Autostart tmux
-# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#   exec tmux
-# fi
