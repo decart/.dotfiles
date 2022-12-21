@@ -6,5 +6,11 @@ require('nvim-web-devicons').setup({
       cterm_color = "185",
       name = "Babelrc",
     },
+    ["svg"] = {
+      icon = "",
+      color = "#FFB13B",
+      cterm_color = "215",
+      name = "Svg",
+    },
   }
 })
