@@ -80,10 +80,20 @@ function _fzf_dev {
 zle -N _fzf_dev
 bindkey '^F' _fzf_dev
 
-function iapt() {
-    if [ -z "$1" ]; then
-        echo "Usage: iapt <initial search string> - select packages on peco and they will be installed"
-    else
-        sudo apt-cache search $1 | peco | awk '{ print $1 }' | tr "\n" " " | xargs -- sudo apt-get install -y
-    fi
+function fapt() {
+  local pkg
+  pkg=$(apt-cache search '.*' | fzf -m | awk '{print $1}')
+  if [ "x$pkg" != "x" ]; then
+    sudo apt install $(echo $pkg)
+  fi
 }
+
+
+function fnpm() {
+  local pkg
+  pkg=$(all-the-package-names | fzf -m)
+  if [ "x$pkg" != "x" ]; then
+    npm i $(echo $packages)
+  fi
+}
+
