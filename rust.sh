@@ -7,13 +7,14 @@ rm -f rust-install.sh
 
 source $HOME/.cargo/env
 
-cargo install fd-find
-cargo install bat
-cargo install exa
-cargo install du-dust
-cargo install ripgrep
-cargo install ytop
-cargo install tealdeer && tldr --update
-cargo install zoxide
-cargo install git-delta
+cargo install \
+  fd-find \
+  bat \
+  exa \
+  du-dust \
+  ripgrep \
+  ytop \
+  zoxide \
+  git-delta \
+  tealdeer && tldr --update
 
