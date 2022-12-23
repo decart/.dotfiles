@@ -4,26 +4,18 @@
 ## INSTALL PACKAGES ##
 ######################
 
-# Install Linux headers
-sudo apt install linux-headers-$(uname -r)
+if [[ $(lsb_release -is) == "Ubuntu" ]]; then
+  source ubuntu.sh
+else
+  source nix.sh
+fi
 
-# Install nix package manager
-curl -L https://nixos.org/nix/install | sh
+# Install rust packages
+source rust.sh
 
-# Source nix
-. ~/.nix-profile/etc/profile.d/nix.sh
-
-nix-channel --add https://nixos.org/channels/nixpkgs-unstable
-nix-channel --update
-
-# Nix main
-nix-env -iA \
-    nixpkgs.zsh \
-    nixpkgs.fzf \
-    nixpkgs.peco \
-    nixpkgs.fd \
-    nixpkgs.bat \
-    nixpkgs.direnv
+# Install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --bin
 
 # Install tmux
 sudo curl -Lo /usr/local/bin/tmux https://github.com/nelsonenzo/tmux-appimage/releases/latest/download/tmux.appimage
@@ -35,20 +27,8 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
 rm -f lazygit.tar.gz
 
-# Install gitui
-curl -LO https://github.com/extrawurst/gitui/releases/latest/download/gitui-linux-musl.tar.gz
-sudo tar -zxf gitui-linux-musl.tar.gz --directory /usr/local/bin
-sudo chmod +x /usr/local/bin/gitui
-rm -f gitui-linux-musl.tar.gz
-
-# Install exa
-EXA_VERSION=$(curl -s "https://api.github.com/repos/ogham/exa/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
-curl -Lo exa.zip "https://github.com/ogham/exa/releases/latest/download/exa-linux-x86_64-v${EXA_VERSION}.zip"
-sudo unzip -q exa.zip bin/exa -d /usr/local
-rm -rf exa.zip
-
 # Install neovim
-sudo curl -Lo /usr/local/bin/nvim https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+sudo curl -Lo /usr/local/bin/nvim https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
 sudo chmod +x /usr/local/bin/nvim
 
 # Install poetry
@@ -56,14 +36,6 @@ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poet
 
 # Install zinit
 bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
-
-if [[ $(lsb_release -is) == "Ubuntu" ]]; then
-  source ubuntu.sh
-else
-  source nix.sh
-fi
-
-nix-collect-garbage
 
 # stow
 mkdir -p ~/.config/nvim

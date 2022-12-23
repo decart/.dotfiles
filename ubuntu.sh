@@ -1,16 +1,17 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt -y install llvm clang build-essential
+# Install Linux build essential
+sudo apt -y install llvm clang build-essential linux-headers-$(uname -r)
+
 # sudo apt -y install tmux
 
 # Install server
 sudo apt -y install \
+  zsh \
   zip \
   unzip \
   git \
-  ripgrep \
-  fd-find \
   stow \
   python3.9-full \
   nginx \

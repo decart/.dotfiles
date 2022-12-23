@@ -7,9 +7,6 @@ zinit snippet OMZP::dirhistory
 zinit snippet OMZP::colored-man-pages
 zinit snippet OMZP::command-not-found
 
-zinit light rupa/z
-zinit light jimeh/zsh-peco-history
-
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-syntax-highlighting

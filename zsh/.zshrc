@@ -11,10 +11,6 @@ ZSH_PECO_HISTORY_OPTS="--layout=bottom-up --initial-filter=Fuzzy"
 
 bindkey '^ ' autosuggest-accept
 bindkey '^[j' forward-word
-# bindkey '^[k' backward-delete-word
-# bindkey  "^[[H"   beginning-of-line
-# bindkey  "^[[F"   end-of-line
-# bindkey  "^[[3~"  delete-char
 bindkey -r '^P'
 # bindkey -v
 
@@ -29,8 +25,7 @@ zstyle ':completion:*' menu select=0
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
-zstyle ':compinstall' filename '/home/mansur/.zshrc'
-zstyle ':omz:plugins:keychain' agents gpg,ssh
+zstyle ':compinstall' filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -65,27 +60,18 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 
+
 fpath=(~/.zsh $fpath)
 
-if [ -s ~/.zsh_plugins.sh ]; then
-  source ~/.zsh_plugins.sh
-fi
 
-if [ -s ~/.zinit.sh ]; then
-  source ~/.zinit.sh
-fi
+[ -f ~/.nix-profile/etc/profile.d/nix.sh ] && . ~/.nix-profile/etc/profile.d/nix.sh
+[ -f ~/.zsh_plugins.sh ] && . ~/.zsh_plugins.sh
+[ -f ~/.cargo/env ] && . ~/.cargo/env
+[ -f ~/.zinit.sh ] && . ~/.zinit.sh
+[ -f ~/.fzf.zsh ] && . ~/.fzf.zsh
+[ -f ~/.aliases ] && . ~/.aliases
+[ -f ~/.zutils ] && . ~/.zutils
 
-if [ -s ~/.aliases ]; then
-  source ~/.aliases
-fi
-
-if [ -s ~/.zutils ]; then
-  source ~/.zutils
-fi
-
-if [ -s ~/.nix-profile/etc/profile.d/nix.sh ]; then 
-  source ~/.nix-profile/etc/profile.d/nix.sh
-fi
 
 if [ -s "$NVM_DIR/nvm.sh" ]; then
   source "$NVM_DIR/nvm.sh" 
@@ -104,5 +90,9 @@ if [ -d /usr/local/go/bin ]; then
   export PATH="$(go env GOPATH)/bin:$PATH"
 fi
 
+eval "$(zoxide init zsh)"
+
+
 export PATH="$HOME/.local/bin:$HOME/.poetry/bin:$PATH"
+
 

@@ -50,6 +50,10 @@ function dcshell {
   dc exec $1 /bin/bash
 }
 
+function sapt {
+  apt-cache search $1 | rg $1
+}
+
 function _fzf_dev {
   local dev_dirs_list=("${(@s/:/)DEV_DIRS}")
   local all_dev_dirs

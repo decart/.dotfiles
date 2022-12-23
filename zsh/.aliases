@@ -45,6 +45,9 @@ alias grp='git remote prune origin'
 alias sail='./vendor/bin/sail'
 alias artdb='art migrate:reset && art migrate && art db:seed && art ide-helper:model -RW'
 alias rcp='rsync -rzv'
+alias top='ytop'
+alias h='tldr'
+alias cd='z'
 
 # Docker
 alias dc="docker-compose"
