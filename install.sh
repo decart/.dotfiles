@@ -19,7 +19,6 @@ nix-channel --update
 # Nix main
 nix-env -iA \
     nixpkgs.zsh \
-    nixpkgs.antibody \
     nixpkgs.fzf \
     nixpkgs.peco \
     nixpkgs.fd \
@@ -55,6 +54,9 @@ sudo chmod +x /usr/local/bin/nvim
 # Install poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
 
+# Install zinit
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+
 if [[ $(lsb_release -is) == "Ubuntu" ]]; then
   source ubuntu.sh
 else
@@ -88,5 +90,3 @@ sudo chmod +x /usr/local/bin/oh-my-posh
 command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh) $USER
 
-# zsh plugins
-antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
