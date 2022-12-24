@@ -96,3 +96,8 @@ eval "$(zoxide init zsh)"
 export PATH="$HOME/.local/bin:$HOME/.poetry/bin:$PATH"
 
 
+
+# pnpm
+export PNPM_HOME="/home/mansur/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
