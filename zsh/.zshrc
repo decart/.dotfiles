@@ -31,8 +31,8 @@ autoload -Uz compinit
 compinit
 
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=1500
+SAVEHIST=1500
 setopt autocd autopushd pushdminus pushdsilent extendedglob notify histignoredups
 unsetopt beep
 
