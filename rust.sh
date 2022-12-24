@@ -8,6 +8,8 @@ rm -f rust-install.sh
 source $HOME/.cargo/env
 
 cargo install \
+  sd \
+  topgrade \
   fd-find \
   bat \
   exa \
