@@ -10,9 +10,11 @@ else
   source nix.sh
 fi
 
-# Install additional packages
-source github.sh
+# Install rust packages
 source rust.sh
+
+# Install packages from github
+source github.sh
 
 # Sotow configs
 mkdir -p ~/.config/nvim

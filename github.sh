@@ -28,3 +28,6 @@ NO_INPUT=1 bash -c "$(curl --fail --show-error --silent --location https://raw.g
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
 sudo chmod +x /usr/local/bin/oh-my-posh
 
+# Remove created config files
+rm -f $HOME/.zshrc
+
