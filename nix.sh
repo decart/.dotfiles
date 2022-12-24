@@ -4,10 +4,11 @@
 nix-env -iA \
     nixpkgs.nginx \
     nixpkgs.mysql80 \
-    nixpkgs.postgresql
-    nixpkgs.imagemagick \
+    nixpkgs.postgresql \
+    nixpkgs.imagemagick
 
 # Install PHP7.4
+nix-env -iA \
     nixpkgs.php74 \
     nixpkgs.php74Extensions.gd \
     nixpkgs.php74Extensions.zip \
