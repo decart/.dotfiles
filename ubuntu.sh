@@ -8,12 +8,13 @@ sudo apt -y install llvm clang build-essential linux-headers-$(uname -r)
 
 # Install server
 sudo apt -y install \
+  curl \
   zsh \
   zip \
   unzip \
   git \
   stow \
-  python3.9-full \
+  python3-full \
   nginx \
   mariadb-server \
   mariadb-client \
