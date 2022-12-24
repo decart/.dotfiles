@@ -59,7 +59,7 @@ function _fzf_dev {
   local all_dev_dirs
 
   for d in $dev_dirs_list; do
-    all_dev_dirs+="$(fdfind -d1 -td . $d)\n"
+    all_dev_dirs+="$(fd -d1 -td . $d)\n"
   done
 
   selected_dir=$(echo $all_dev_dirs | \
