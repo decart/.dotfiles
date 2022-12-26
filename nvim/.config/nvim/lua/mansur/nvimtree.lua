@@ -44,5 +44,14 @@ require('nvim-tree').setup {
     open_file = {
       resize_window = true
     }
-  }
+  },
+  diagnostics = {
+    enable = true,
+    icons = {
+      hint = "",
+      info = "",
+      warning = "",
+      error = "",
+    },
+  },
 }
