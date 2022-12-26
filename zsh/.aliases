@@ -48,6 +48,7 @@ alias rcp='rsync -rzv'
 alias top='ytop'
 alias h='tldr'
 alias cd='z'
+alias npm='pnpm'
 
 # Docker
 alias dc="docker-compose"
