@@ -127,7 +127,3 @@ sudo apt -y install \
   php8.1-yaml \
   php8.1-zip
 
-# Install Composer
-curl -s https://getcomposer.org/installer | php
-sudo mv composer.phar /usr/local/bin/composer
-
