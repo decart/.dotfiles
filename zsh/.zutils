@@ -72,7 +72,7 @@ function _fzf_dev {
         --query "$LBUFFER")
 
   if [ -n "$selected_dir" ]; then
-      BUFFER="cd $selected_dir"
+      BUFFER="vim $selected_dir"
       zle accept-line
   fi
 }
