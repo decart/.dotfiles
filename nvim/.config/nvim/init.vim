@@ -20,6 +20,7 @@ set mouse=
 set ignorecase
 set smartcase
 set noshowmode
+set autoread
 set signcolumn=yes:2
 set clipboard=unnamedplus
 set listchars=lead:·,tab:▷ ,trail:·,extends:◣,precedes:◢,nbsp:○
@@ -44,6 +45,7 @@ augroup CursorLine
 augroup END
 
 au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=150}
+au FocusGained,BufEnter * :checktime
 
 lua require('mansur.plugins')
 
