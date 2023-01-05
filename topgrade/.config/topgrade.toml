@@ -1,0 +1,5 @@
+[git]
+repos = [
+  "~/data/html/*/",
+  "~/data/javascript/*/",
+]

@@ -22,6 +22,7 @@ mkdir -p ~/.config/nvim
 stow zsh
 stow git
 stow nvim
+stow topgrade
 
 cp .zenv ~/.zenv
 
