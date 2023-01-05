@@ -27,6 +27,7 @@ require('lualine').setup {
   extensions = {
     'nvim-tree',
     'neo-tree',
-    'toggleterm'
+    'toggleterm',
+    'nvim-dap-ui',
   }
 }

@@ -1,5 +1,6 @@
 require('mansur.lsp.diagnostic')
 require('mansur.lsp.config').setup_servers()
+require('mansur.lsp.dap')
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
   border = "rounded",

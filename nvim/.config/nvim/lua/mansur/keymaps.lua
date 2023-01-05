@@ -1,4 +1,5 @@
 local keymap = require('mansur.utils').map
+local dap = require('dap')
 
 -- Leader to <Space>
 keymap('', '<Space>', '<Nop>')
@@ -28,12 +29,23 @@ keymap('n', '<C-h>', ':wincmd h<cr>')
 keymap('n', '<C-j>', ':wincmd j<cr>')
 keymap('n', '<C-k>', ':wincmd k<cr>')
 keymap('n', '<C-l>', ':wincmd l<cr>')
+keymap('n', '<C-Left>', ':vertical resize -5<cr>')
+keymap('n', '<C-Right>', ':vertical resize +5<cr>')
+keymap('n', '<C-Up>', ':resize -5<cr>')
+keymap('n', '<C-Down>', ':resize +5<cr>')
 keymap('n', '<C-\\>', ':vsplit %<cr>')
 keymap('n', '<A-\\>', ':split %<cr>')
 
 -- Telescope
 keymap('n', '<C-p>', ':Telescope find_files<cr>')
 keymap('n', '<C-f>', ':Telescope live_grep<cr>')
+
+-- Debug
+keymap('n', '<F5>', dap.continue)
+keymap('n', '<F10>', dap.step_over)
+keymap('n', '<F11>', dap.step_into)
+keymap('n', '<F12>', dap.step_out)
+keymap('n', '<S-F5>', dap.terminate)
 
 -- Buffer navigation
 keymap('n', '<A-o>', ':buffer #<cr>')

@@ -12,9 +12,12 @@ require('packer').startup(function (use)
   use { 'lambdalisue/suda.vim' }
 
   -- Laguages
-  use { 'nvim-treesitter/nvim-treesitter', run = TSUpdate}
+  use { 'mfussenegger/nvim-dap' }
   use { 'williamboman/mason.nvim' }
   use { 'williamboman/mason-lspconfig.nvim' }
+  use { 'jayp0521/mason-nvim-dap.nvim' }
+
+  use { 'nvim-treesitter/nvim-treesitter', run = TSUpdate}
   use { 'jose-elias-alvarez/null-ls.nvim' }
   use { 'jayp0521/mason-null-ls.nvim' }
   use { 'neovim/nvim-lspconfig' }
@@ -32,6 +35,7 @@ require('packer').startup(function (use)
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'lewis6991/gitsigns.nvim' }
   use { 'romgrk/barbar.nvim' }
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
   -- Color theme
   use { 'gruvbox-community/gruvbox' }

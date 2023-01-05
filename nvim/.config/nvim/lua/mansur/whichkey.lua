@@ -1,5 +1,7 @@
 local wk       = require('which-key')
 local Terminal = require('toggleterm.terminal').Terminal
+local dap      = require('dap')
+local dapui    = require('dapui')
 
 local lazygit = Terminal:new({
   cmd = "lazygit",
@@ -27,6 +29,13 @@ wk.register({
     h = { function() vim.lsp.buf.signature_help() end, 'Signature help' },
     d = { function() vim.diagnostic.open_float() end, 'Diagnostic float' },
     f = { function() vim.lsp.buf.format({ async = true, timeout_ms = 2000 }) end, 'Format code' },
+  },
+  d = {
+    name = 'Debug',
+    r = { require('dap.ext.vscode').load_launchjs, 'Reload launchjs config' },
+    b = { dap.toggle_breakpoint, 'Toggle breakpoint' },
+    e = { dapui.eval, 'Eval expression' },
+    f = { dapui.float_element, 'Floating elements' },
   },
   g = {
     name = 'Git',
