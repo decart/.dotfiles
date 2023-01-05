@@ -9,6 +9,7 @@ source $HOME/.cargo/env
 
 cargo install \
   sd \
+  cargo-update \
   topgrade \
   fd-find \
   bat \
