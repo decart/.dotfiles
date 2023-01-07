@@ -11,6 +11,7 @@ sudo dnf config-manager --set-enabled remi
 sudo dnf check-update -y && sudo dnf upgrade -y
 
 sudo dnf install -y \
+  clang \
   curl \
   fuse \
   zsh \
