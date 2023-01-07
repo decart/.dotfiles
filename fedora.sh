@@ -19,6 +19,7 @@ sudo dnf install -y \
   unzip \
   git \
   stow \
+  gnome-tweaks \
   util-linux-user \
   python3 \
   mariadb-server \
