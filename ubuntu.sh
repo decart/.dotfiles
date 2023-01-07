@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "====== UBUNTU ======"
+
 sudo apt update
 # Install Linux build essential
 sudo apt -y install llvm clang build-essential linux-headers-"$(uname -r)"

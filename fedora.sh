@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+echo "====== FEDORA ======"
+
 sudo dnf check-update -y && sudo dnf upgrade -y
 sudo dnf group install -y "C Development Tools and Libraries" "Development Tools"
 sudo dnf install -y llvm kernel-devel kernel-headers
@@ -12,6 +14,7 @@ sudo dnf install -y \
   unzip \
   git \
   stow \
+  util-linux-user \
   python3 \
   mariadb-server \
   mariadb \
