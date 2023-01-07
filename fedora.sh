@@ -6,6 +6,10 @@ sudo dnf check-update -y && sudo dnf upgrade -y
 sudo dnf group install -y "C Development Tools and Libraries" "Development Tools"
 sudo dnf install -y llvm kernel-devel kernel-headers
 
+sudo dnf install -y http://rpms.remirepo.net/fedora/remi-release-37.rpm
+sudo dnf config-manager --set-enabled remi
+sudo dnf check-update -y && sudo dnf upgrade -y
+
 sudo dnf install -y \
   curl \
   fuse \
@@ -25,10 +29,6 @@ sudo dnf install -y \
   ImageMagick7
 
 sudo /usr/bin/postgresql-setup --initdb # Init postgresql
-
-sudo dnf install -y http://rpms.remirepo.net/fedora/remi-release-37.rpm
-sudo dnf config-manager --set-enabled remi
-sudo dnf update -y
 
 sudo dnf install -y \
   php81-php \
