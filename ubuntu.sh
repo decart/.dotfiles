@@ -14,6 +14,7 @@ sudo apt -y install \
   git \
   stow \
   python3-full \
+  python3-pip \
   nginx \
   mariadb-server \
   mariadb-client \
