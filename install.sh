@@ -1,11 +1,15 @@
 #!/bin/bash
 
+source utils.sh
+
 ######################
 ## INSTALL PACKAGES ##
 ######################
 
-if [[ $(lsb_release -is) == "Ubuntu" ]]; then
+if [[ $(release_name) == "ubuntu" ]]; then
   source ubuntu.sh
+elif [[ $(release_name) == "fedora" ]]; then
+  source fedora.sh
 else
   source nix.sh
 fi
