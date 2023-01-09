@@ -19,7 +19,7 @@ sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
 rm -f lazygit.tar.gz
 
 # Install neovim
-sudo curl -Lo /usr/local/bin/nvim https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+sudo curl -Lo /usr/local/bin/nvim https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
 sudo chmod +x /usr/local/bin/nvim
 
 # Install poetry
