@@ -1,73 +1,71 @@
 vim.g.enable_bold_font = 1
 vim.g.enable_italic_font = 1
-vim.api.nvim_set_option('background', 'dark')
 vim.cmd('colorscheme hybrid_reverse')
 
 local utils = require('mansur.utils')
 local bg = utils.bg
-local hi = utils.hi
 local hiGroups = utils.hi_table
 
 local bgNormal = bg('Normal')
 local bgInactive = '#26373c'
 
-vim.cmd('hi BufferCurrent guibg=' .. bgNormal)
-vim.cmd('hi BufferCurrentSign guibg=' .. bgNormal)
-vim.cmd('hi BufferTabpageFill guibg=' .. bgInactive)
-vim.cmd('hi BufferInactive guibg=' .. bgInactive)
-vim.cmd('hi BufferInactiveSign guibg=' .. bgInactive)
-vim.cmd('hi BufferInactiveMod guibg=' .. bgInactive)
-vim.cmd('hi BufferVisible guibg=' .. bgInactive)
-vim.cmd('hi BufferVisibleSign guibg=' .. bgInactive)
-vim.cmd('hi BufferVisibleMod guibg=' .. bgInactive)
-
-vim.cmd('hi DiagnosticHint guifg=#666666')
-vim.cmd('hi DiagnosticError guifg=#F44336')
-vim.cmd('hi DiagnosticWarn guifg=#b27300')
-
-hi('NvimTreeGitDirty', { fg = "#f0c674" })
-hi('NvimTreeGitNew', { fg = "#b5bd68" })
-hi('NvimTreeGitDeleted', { link = "NvimTreeLspDiagnosticsError" })
-
 hiGroups({
-  PmenuSel = { bg = "#282C34", fg = "NONE" },
-  Pmenu = { fg = "#C5CDD9", bg = "#22252A" },
+  BufferCurrent =       { bg = bgNormal },
+  BufferCurrentSign =   { bg = bgNormal },
+  BufferTabpageFill =   { bg = bgInactive },
+  BufferInactive =      { bg = bgInactive },
+  BufferInactiveSign =  { bg = bgInactive },
+  BufferInactiveMod =   { bg = bgInactive },
+  BufferVisible =       { bg = bgInactive },
+  BufferVisibleSign =   { bg = bgInactive },
+  BufferVisibleMod =    { bg = bgInactive },
+
+  DiagnosticHint =  { fg = "#666666" },
+  DiagnosticError = { fg = "#F44336" },
+  DiagnosticWarn =  { fg = "#b27300" },
+
+  NvimTreeGitDirty =    { fg = "#f0c674" },
+  NvimTreeGitNew =      { fg = "#b5bd68" },
+  NvimTreeGitDeleted =  { link = "NvimTreeLspDiagnosticsError" },
+
+  PmenuSel =  { bg = "#282C34", fg = "NONE" },
+  Pmenu =     { fg = "#C5CDD9", bg = "#22252A" },
 
   CmpItemAbbrDeprecated = { fg = "#7E8294", bg = "NONE", strikethrough = true },
-  CmpItemAbbrMatch = { fg = "#82AAFF", bg = "NONE", bold = true },
+  CmpItemAbbrMatch =      { fg = "#82AAFF", bg = "NONE", bold = true },
   CmpItemAbbrMatchFuzzy = { fg = "#82AAFF", bg = "NONE", bold = true },
-  CmpItemMenu = { fg = "#C792EA", bg = "NONE", italic = true },
+  CmpItemMenu =           { fg = "#C792EA", bg = "NONE", italic = true },
 
-  CmpItemKindField = { fg = "#EED8DA", bg = "#B5585F" },
-  CmpItemKindProperty = { fg = "#EED8DA", bg = "#B5585F" },
-  CmpItemKindEvent = { fg = "#EED8DA", bg = "#B5585F" },
+  CmpItemKindField =    { fg = "#000000", bg = "#B5585F" },
+  CmpItemKindProperty = { fg = "#000000", bg = "#B5585F" },
+  CmpItemKindEvent =    { fg = "#000000", bg = "#B5585F" },
 
-  CmpItemKindText = { fg = "#C3E88D", bg = "#9FBD73" },
-  CmpItemKindEnum = { fg = "#C3E88D", bg = "#9FBD73" },
-  CmpItemKindKeyword = { fg = "#C3E88D", bg = "#9FBD73" },
+  CmpItemKindText =     { fg = "#000000", bg = "#9FBD73" },
+  CmpItemKindEnum =     { fg = "#000000", bg = "#9FBD73" },
+  CmpItemKindKeyword =  { fg = "#000000", bg = "#9FBD73" },
 
-  CmpItemKindConstant = { fg = "#FFE082", bg = "#D4BB6C" },
-  CmpItemKindConstructor = { fg = "#FFE082", bg = "#D4BB6C" },
-  CmpItemKindReference = { fg = "#FFE082", bg = "#D4BB6C" },
+  CmpItemKindConstant =     { fg = "#000000", bg = "#D4BB6C" },
+  CmpItemKindConstructor =  { fg = "#000000", bg = "#D4BB6C" },
+  CmpItemKindReference =    { fg = "#000000", bg = "#D4BB6C" },
 
-  CmpItemKindFunction = { fg = "#EADFF0", bg = "#A377BF" },
-  CmpItemKindStruct = { fg = "#EADFF0", bg = "#A377BF" },
-  CmpItemKindClass = { fg = "#EADFF0", bg = "#A377BF" },
-  CmpItemKindModule = { fg = "#EADFF0", bg = "#A377BF" },
-  CmpItemKindOperator = { fg = "#EADFF0", bg = "#A377BF" },
+  CmpItemKindFunction = { fg = "#000000", bg = "#A377BF" },
+  CmpItemKindStruct =   { fg = "#000000", bg = "#A377BF" },
+  CmpItemKindClass =    { fg = "#000000", bg = "#A377BF" },
+  CmpItemKindModule =   { fg = "#000000", bg = "#A377BF" },
+  CmpItemKindOperator = { fg = "#000000", bg = "#A377BF" },
 
-  CmpItemKindVariable = { fg = "#C5CDD9", bg = "#7E8294" },
-  CmpItemKindFile = { fg = "#C5CDD9", bg = "#7E8294" },
+  CmpItemKindVariable = { fg = "#000000", bg = "#7E8294" },
+  CmpItemKindFile =     { fg = "#000000", bg = "#7E8294" },
 
-  CmpItemKindUnit = { fg = "#F5EBD9", bg = "#D4A959" },
-  CmpItemKindSnippet = { fg = "#F5EBD9", bg = "#D4A959" },
-  CmpItemKindFolder = { fg = "#F5EBD9", bg = "#D4A959" },
+  CmpItemKindUnit =     { fg = "#000000", bg = "#D4A959" },
+  CmpItemKindSnippet =  { fg = "#000000", bg = "#D4A959" },
+  CmpItemKindFolder =   { fg = "#000000", bg = "#D4A959" },
 
-  CmpItemKindMethod = { fg = "#DDE5F5", bg = "#6C8ED4" },
-  CmpItemKindValue = { fg = "#DDE5F5", bg = "#6C8ED4" },
-  CmpItemKindEnumMember = { fg = "#DDE5F5", bg = "#6C8ED4" },
+  CmpItemKindMethod =     { fg = "#000000", bg = "#6C8ED4" },
+  CmpItemKindValue =      { fg = "#000000", bg = "#6C8ED4" },
+  CmpItemKindEnumMember = { fg = "#000000", bg = "#6C8ED4" },
 
-  CmpItemKindInterface = { fg = "#D8EEEB", bg = "#58B5A8" },
-  CmpItemKindColor = { fg = "#D8EEEB", bg = "#58B5A8" },
-  CmpItemKindTypeParameter = { fg = "#D8EEEB", bg = "#58B5A8" },
+  CmpItemKindInterface =      { fg = "#000000", bg = "#58B5A8" },
+  CmpItemKindColor =          { fg = "#000000", bg = "#58B5A8" },
+  CmpItemKindTypeParameter =  { fg = "#000000", bg = "#58B5A8" },
 })
