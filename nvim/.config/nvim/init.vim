@@ -1,5 +1,6 @@
 syntax on
 
+set background=dark
 set termguicolors
 set tabstop=2
 set softtabstop=2

@@ -43,5 +43,11 @@ M.hi = function(name, val)
   vim.api.nvim_set_hl(0, name, val)
 end
 
+M.hi_table = function(groups)
+  for group, def in pairs(groups) do
+    M.hi(group, def)
+  end
+end
+
 
 return M
