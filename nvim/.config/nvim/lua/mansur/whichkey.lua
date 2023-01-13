@@ -29,6 +29,7 @@ wk.register({
     h = { function() vim.lsp.buf.signature_help() end, 'Signature help' },
     d = { function() vim.diagnostic.open_float() end, 'Diagnostic float' },
     f = { function() vim.lsp.buf.format({ async = true, timeout_ms = 2000 }) end, 'Format code' },
+    r = { '<cmd>LspRestart<cr>', 'Restart' }
   },
   d = {
     name = 'Debug',
