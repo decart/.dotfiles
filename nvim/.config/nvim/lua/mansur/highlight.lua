@@ -1,6 +1,6 @@
 vim.g.enable_bold_font = 1
 vim.g.enable_italic_font = 1
-vim.cmd('colorscheme hybrid_reverse')
+vim.cmd('colorscheme dracula')
 
 local utils = require('mansur.utils')
 local bg = utils.bg

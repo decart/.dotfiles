@@ -41,6 +41,7 @@ require('packer').startup(function (use)
   use { 'gruvbox-community/gruvbox' }
   use { 'kristijanhusak/vim-hybrid-material' }
   use { 'lukas-reineke/indent-blankline.nvim' }
+  use {'dracula/vim', as = 'dracula'}
 
   -- Telescope
   use { 'nvim-lua/plenary.nvim' }
