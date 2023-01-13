@@ -8,10 +8,6 @@ vim.g.mapleader = ' '
 -- Macros
 keymap('n', 'Q', '@@')
 
--- Save by <C-s>
--- keymap('i', '<C-s>', '<esc>:w<cr>')
--- keymap('n', '<C-s>', '<esc>:w<cr>')
-
 -- Disable yank of some commands
 keymap('n', 'x', '"_x')
 keymap('n', 'c', '"_c')
