@@ -1,10 +1,7 @@
-local null_ls = require('null-ls')
-local servers = { 'stylua', 'jq', 'eslint_d', 'blade', 'shellcheck' }
-
-null_ls.setup({ sources = { null_ls.builtins.diagnostics.eslint } })
+require('null_ls').setup()
 
 require('mason-null-ls').setup({
-  ensure_installed = servers,
+  ensure_installed = { 'stylua', 'jq', 'eslint_d', 'blade', 'shellcheck' },
   automatic_installation = true,
   automatic_setup = true
 })
