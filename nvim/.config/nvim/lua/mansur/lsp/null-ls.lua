@@ -1,4 +1,4 @@
-require('null_ls').setup()
+require('null-ls').setup()
 
 require('mason-null-ls').setup({
   ensure_installed = { 'stylua', 'jq', 'eslint_d', 'blade', 'shellcheck' },
