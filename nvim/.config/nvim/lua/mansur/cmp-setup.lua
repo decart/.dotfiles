@@ -9,7 +9,7 @@ cmp.setup {
   formatting = {
     fields = { 'kind', 'abbr', 'menu' },
     format = function (entry, vim_item)
-      local formatter = lspkind.cmp_format({ mode = 'symbol_text', preset = 'codicons', maxwidth = 45 })
+      local formatter = lspkind.cmp_format({ mode = 'symbol_text', preset = 'default', maxwidth = 45 })
 
       local kind = formatter(entry, vim_item)
       local strings = vim.split(kind.kind, '%s', { trimempty = true })
