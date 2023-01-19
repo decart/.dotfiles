@@ -5,11 +5,20 @@ local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 
 vim.o.completeopt = 'menuone,noselect'
 
+lspkind.init({
+  mode = "symbol_text",
+  maxwidth = 45,
+  symbol_map = {
+    Field = "",
+    Property = "",
+  }
+})
+
 cmp.setup {
   formatting = {
     fields = { 'kind', 'abbr', 'menu' },
     format = function (entry, vim_item)
-      local formatter = lspkind.cmp_format({ mode = 'symbol_text', preset = 'default', maxwidth = 45 })
+      local formatter = lspkind.cmp_format()
 
       local kind = formatter(entry, vim_item)
       local strings = vim.split(kind.kind, '%s', { trimempty = true })
