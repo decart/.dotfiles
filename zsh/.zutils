@@ -80,20 +80,36 @@ function _fzf_dev {
 zle -N _fzf_dev
 bindkey '^F' _fzf_dev
 
+function fzf_history {
+history -in -1 0 | \
+  fzf --border=rounded \
+      --margin=2,16 \
+      --prompt="History » " \
+      --pointer=▶ \
+      -1 \
+      --query "$1" | \
+      awk -F'  ' '{print $2}'
+}
+
 function hist {
-  selected_cmd=$(history -in -1 0 | \
-    fzf --border=rounded \
-        --margin=2,16 \
-        --prompt="History » " \
-        --pointer=▶ \
-        -1 \
-        --query "$1" | \
-        awk -F'  ' '{print $2}')
+  selected_cmd=$(fzf_history $1)
 
   if [[ -n "$selected_cmd" ]]; then
     eval $selected_cmd
   fi
 }
+
+function _fzf_hist {
+  selected_cmd=$(fzf_history $LBUFFER)
+
+  if [[ -n "$selected_cmd" ]]; then
+    BUFFER="$selected_cmd"
+    zle accept-line
+  fi
+}
+
+zle -N _fzf_hist
+bindkey '^r' _fzf_hist
 
 function fapt() {
   local pkg
