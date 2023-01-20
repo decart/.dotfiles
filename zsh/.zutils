@@ -63,7 +63,7 @@ function _fzf_dev {
   done
 
   selected_dir=$(echo $all_dev_dirs | \
-    fzf --preview 'tree {}' \
+    fzf --preview 'exa --icons --group-directories-first -la --no-time --no-user --no-permissions --no-filesize -T -L1 {}' \
         --border=rounded \
         --margin=2,16 \
         --prompt="Projects > " \
