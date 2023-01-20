@@ -80,6 +80,21 @@ function _fzf_dev {
 zle -N _fzf_dev
 bindkey '^F' _fzf_dev
 
+function hist {
+  selected_cmd=$(history -in -1 0 | \
+    fzf --border=rounded \
+        --margin=2,16 \
+        --prompt="History » " \
+        --pointer=▶ \
+        -1 \
+        --query "$1" | \
+        awk -F'  ' '{print $2}')
+
+  if [[ -n "$selected_cmd" ]]; then
+    eval $selected_cmd
+  fi
+}
+
 function fapt() {
   local pkg
   pkg=$(apt-cache search '.*' | fzf -m | awk '{print $1}')
