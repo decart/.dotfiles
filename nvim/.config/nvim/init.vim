@@ -2,11 +2,18 @@ syntax on
 
 set background=dark
 set termguicolors
+
 set tabstop=2
-set softtabstop=2
+set softtabstop=-1
+set shiftwidth=0
+set shiftround
 set expandtab
-set smartindent
-set shiftwidth=2
+set autoindent
+set cpoptions+=I
+" set smartindent
+" set cindent
+filetype plugin indent on
+
 set number
 set relativenumber
 set numberwidth=4
