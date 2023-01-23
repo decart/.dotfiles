@@ -20,7 +20,7 @@
           "type": "path"
         },
         {
-          "foreground": "#F62F2E",
+          "foreground": "#bf55ec",
           "properties": {
             "fetch_status": true
           },
