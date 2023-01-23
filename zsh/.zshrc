@@ -30,9 +30,14 @@ zstyle ':compinstall' filename '$HOME/.zshrc'
 autoload -Uz compinit
 compinit
 
-HISTFILE=~/.histfile
-HISTSIZE=3000
-SAVEHIST=3000
+export HISTFILE=~/.histfile
+export HISTFILESIZE=1000000000
+export HISTSIZE=30000
+export SAVEHIST=30000
+
+setopt EXTENDED_HISTORY
+setopt INC_APPEND_HISTORY
+
 setopt autocd autopushd pushdminus pushdsilent extendedglob notify histignoredups
 unsetopt beep
 
@@ -78,7 +83,8 @@ if [ -s "$NVM_DIR/nvm.sh" ]; then
 fi
 
 if [ -s ~/.mansur.omp.json ]; then
-  eval "$(oh-my-posh prompt init zsh --config ~/.mansur.omp.json)"
+  # eval "$(oh-my-posh prompt init zsh --config ~/.mansur.omp.json)"
+  eval "$(oh-my-posh prompt init zsh --config ~/.di4am0nd.omp.json)"
 fi
 
 if [ -d ~/.config/composer/vendor/bin ]; then
