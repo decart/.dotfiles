@@ -41,46 +41,18 @@ setopt INC_APPEND_HISTORY
 setopt autocd autopushd pushdminus pushdsilent extendedglob notify histignoredups
 unsetopt beep
 
-### Added by Zinit's installer
-if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
-    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
-    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
-        print -P "%F{33} %F{34}Installation successful.%f%b" || \
-        print -P "%F{160} The clone has failed.%f%b"
-fi
-
-source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
-
-### End of Zinit's installer chunk
-
-
-
 fpath=(~/.zsh $fpath)
 
+[ -f ~/.zcomet.sh ] && . ~/.zcomet.sh
+[ -f ~/.zsh_plugins.sh ] && . ~/.zsh_plugins.sh
+[ -f ~/.zinit.sh ] && . ~/.zinit.sh
 
 [ -f ~/.nix-profile/etc/profile.d/nix.sh ] && . ~/.nix-profile/etc/profile.d/nix.sh
-[ -f ~/.zsh_plugins.sh ] && . ~/.zsh_plugins.sh
 [ -f ~/.cargo/env ] && . ~/.cargo/env
-[ -f ~/.zinit.sh ] && . ~/.zinit.sh
 [ -f ~/.fzf.zsh ] && . ~/.fzf.zsh
 [ -f ~/.aliases ] && . ~/.aliases
 [ -f ~/.zutils ] && . ~/.zutils
-
-
-if [ -s "$NVM_DIR/nvm.sh" ]; then
-  source "$NVM_DIR/nvm.sh" 
-fi
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 if [ -s ~/.mansur.omp.json ]; then
   # eval "$(oh-my-posh prompt init zsh --config ~/.mansur.omp.json)"
@@ -89,6 +61,10 @@ fi
 
 if [ -d ~/.config/composer/vendor/bin ]; then
   export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+fi
+
+if [ -d $(yarn global bin) ]; then
+  export PATH="$(yarn global bin):$PATH"
 fi
 
 if [ -d /usr/local/go/bin ]; then
@@ -107,3 +83,10 @@ export PATH="$HOME/.local/bin:$HOME/.poetry/bin:$PATH"
 export PNPM_HOME="/home/mansur/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+# bun completions
+[ -s "/home/mansur/.bun/_bun" ] && source "/home/mansur/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
