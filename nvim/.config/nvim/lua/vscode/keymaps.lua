@@ -32,7 +32,7 @@ map('', 'F', function()
 end)
 
 map('', 't', function()
-  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_of = -1 })
+  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset  = -1 })
 end)
 
 map('', 'T', function()
