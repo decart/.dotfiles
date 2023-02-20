@@ -1,6 +1,10 @@
 local keymap = require('mansur.utils').map
 local dap = require('dap')
 
+keymap('i', 'jk', '<Esc>')
+keymap('i', 'jj', '<Esc>')
+
+
 -- Leader to <Space>
 keymap('', '<Space>', '<Nop>')
 vim.g.mapleader = ' '
