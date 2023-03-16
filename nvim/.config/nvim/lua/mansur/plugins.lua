@@ -50,8 +50,8 @@ require('packer').startup(function (use)
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use { 'nvim-telescope/telescope-project.nvim' }
 
-  use { 'kyazdani42/nvim-tree.lua' }  -- Tree view
-  -- use { 'nvim-neo-tree/neo-tree.nvim' } -- Tree view
+  -- use { 'kyazdani42/nvim-tree.lua' }  -- Tree view
+  use { 'nvim-neo-tree/neo-tree.nvim' } -- Tree view
   -- use { 'glepnir/dashboard-nvim' }
   use { 'mhinz/vim-startify' }
   use { 'phaazon/hop.nvim' }
