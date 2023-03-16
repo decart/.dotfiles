@@ -90,3 +90,6 @@ export PATH="$PNPM_HOME:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Deno
+export PATH="$DENO_INSTALL/bin:$PATH"
