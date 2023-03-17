@@ -14,6 +14,9 @@ else
   source nix.sh
 fi
 
+# Install homebrew packages
+source homebrew.sh
+
 # Install rust packages
 source rust.sh
 

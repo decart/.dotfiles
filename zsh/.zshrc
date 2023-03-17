@@ -54,6 +54,9 @@ fpath=(~/.zsh $fpath)
 [ -f ~/.zutils ] && . ~/.zutils
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
+# Homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 if [ -s ~/.mansur.omp.json ]; then
   # eval "$(oh-my-posh prompt init zsh --config ~/.mansur.omp.json)"
   eval "$(oh-my-posh prompt init zsh --config ~/.di4am0nd.omp.json)"
@@ -93,3 +96,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Deno
 export PATH="$DENO_INSTALL/bin:$PATH"
+
