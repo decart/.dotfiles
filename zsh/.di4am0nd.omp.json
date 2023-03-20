@@ -29,14 +29,15 @@
           "type": "git"
         },
         {
-          "foreground": "#98C379",
+          "foreground": "#ff4c30",
           "foreground_templates": [
-            "{{ if .Mismatch }}#ff4c30{{ end }}"
+            "{{ if .Mismatch }}#98C379{{ end }}"
           ],
           "properties": {
             "fetch_version": true
           },
           "style": "plain",
+          "fetch_package_manager": true,
           "template": "<#ffffff>via</> \ue781 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
         }

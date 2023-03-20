@@ -50,6 +50,7 @@
             "fetch_version": true
           },
           "style": "plain",
+          "fetch_package_manager": true,
           "template": " \ue781 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
         },
