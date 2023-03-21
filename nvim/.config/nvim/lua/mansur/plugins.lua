@@ -35,6 +35,7 @@ require('packer').startup(function (use)
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'lewis6991/gitsigns.nvim' }
   use { 'romgrk/barbar.nvim' }
+  use { 'chentoast/marks.nvim' }
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
   -- Color theme
