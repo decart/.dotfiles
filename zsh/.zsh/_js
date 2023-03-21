@@ -1,0 +1,6 @@
+#compdef js
+
+function _js {
+  _values 'dirs' $(ls -l $HOME/data/javascript/ | grep "^d" | awk "{print \$9}")
+}
+

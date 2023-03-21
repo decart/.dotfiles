@@ -26,6 +26,7 @@ zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 zstyle ':compinstall' filename '$HOME/.zshrc'
+fpath=(~/.zsh $fpath)
 
 autoload -Uz compinit
 compinit
@@ -41,12 +42,6 @@ setopt INC_APPEND_HISTORY
 setopt autocd autopushd pushdminus pushdsilent extendedglob notify histignoredups
 unsetopt beep
 
-fpath=(~/.zsh $fpath)
-
-[ -f ~/.zcomet.sh ] && . ~/.zcomet.sh
-[ -f ~/.zsh_plugins.sh ] && . ~/.zsh_plugins.sh
-[ -f ~/.zinit.sh ] && . ~/.zinit.sh
-
 [ -f ~/.nix-profile/etc/profile.d/nix.sh ] && . ~/.nix-profile/etc/profile.d/nix.sh
 [ -f ~/.cargo/env ] && . ~/.cargo/env
 [ -f ~/.fzf.zsh ] && . ~/.fzf.zsh
@@ -54,10 +49,14 @@ fpath=(~/.zsh $fpath)
 [ -f ~/.zutils ] && . ~/.zutils
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
+[ -f ~/.zcomet.sh ] && . ~/.zcomet.sh
+[ -f ~/.zsh_plugins.sh ] && . ~/.zsh_plugins.sh
+[ -f ~/.zinit.sh ] && . ~/.zinit.sh
+
 # Homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-if [ -s ~/.mansur.omp.json ]; then
+if [ -s ~/.di4am0nd.omp.json ]; then
   # eval "$(oh-my-posh prompt init zsh --config ~/.mansur.omp.json)"
   eval "$(oh-my-posh prompt init zsh --config ~/.di4am0nd.omp.json)"
 fi
@@ -66,16 +65,12 @@ if [ -d ~/.config/composer/vendor/bin ]; then
   export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 fi
 
-if [ -d $(yarn global bin) ]; then
-  export PATH="$(yarn global bin):$PATH"
-fi
-
 if [ -d /usr/local/go/bin ]; then
   export PATH="/usr/local/go/bin:$PATH"
   export PATH="$(go env GOPATH)/bin:$PATH"
 fi
 
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
 
 
 export PATH="$HOME/.local/bin:$HOME/.poetry/bin:$PATH"

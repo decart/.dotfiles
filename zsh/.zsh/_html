@@ -1,0 +1,5 @@
+#compdef html
+
+function _html {
+  _values 'dirs' $(ls -l $HOME/data/html/ | grep "^d" | awk "{print \$9}")
+}

@@ -1,0 +1,6 @@
+#compdef usephp
+
+function _usephp {
+  _values 'versions' $(ls /usr/bin/php[0-9]* | awk -F '/' '{print $4}' | sed 's/php//')
+}
+
