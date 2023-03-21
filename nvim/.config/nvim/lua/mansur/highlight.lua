@@ -52,6 +52,14 @@ require('dracula').setup({
     CmpItemKindInterface =      { fg = "#000000", bg = "#58B5A8" },
     CmpItemKindColor =          { fg = "#000000", bg = "#58B5A8" },
     CmpItemKindTypeParameter =  { fg = "#000000", bg = "#58B5A8" },
+
+    BufferTabpageFill = { bg = "#44475c" },
+    BufferInactive = { fg="#7c82a8", bg = "#44475c" },
+    BufferInactiveSign = { fg="#7c82a8", bg = "#44475c" },
+    BufferInactiveIndex = { fg="#7c82a8", bg = "#44475c" },
+    BufferInactiveWARN = { fg="#f1fa8c", bg = "#44475c" },
+    BufferInactiveERROR = { fg="#ff6e6e", bg = "#44475c" },
+    BufferInactiveMod = { fg="#f1fa8c", bg = "#44475c" },
   }
 })
 
