@@ -70,7 +70,7 @@ if [ -d /usr/local/go/bin ]; then
   export PATH="$(go env GOPATH)/bin:$PATH"
 fi
 
-# eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh)"
 
 
 export PATH="$HOME/.local/bin:$HOME/.poetry/bin:$PATH"
