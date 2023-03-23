@@ -1,9 +1,9 @@
-local cmp = require('cmp')
-local lspkind = require('lspkind')
-local luasnip = require('luasnip')
-local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+local cmp = require("cmp")
+local lspkind = require("lspkind")
+local luasnip = require("luasnip")
+local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 
-vim.o.completeopt = 'menuone,noselect'
+vim.o.completeopt = "menuone,noselect"
 
 lspkind.init({
   mode = "symbol_text",
@@ -11,17 +11,17 @@ lspkind.init({
   symbol_map = {
     Field = "",
     Property = "",
-  }
+  },
 })
 
-cmp.setup {
+cmp.setup({
   formatting = {
-    fields = { 'kind', 'abbr', 'menu' },
-    format = function (entry, vim_item)
+    fields = { "kind", "abbr", "menu" },
+    format = function(entry, vim_item)
       local formatter = lspkind.cmp_format()
 
       local kind = formatter(entry, vim_item)
-      local strings = vim.split(kind.kind, '%s', { trimempty = true })
+      local strings = vim.split(kind.kind, "%s", { trimempty = true })
 
       kind.kind = " " .. (strings[1] or "") .. " "
       kind.menu = "    " .. (strings[2] or "")
@@ -31,9 +31,9 @@ cmp.setup {
   },
 
   mapping = {
-    ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 
-    ['<Tab>'] = cmp.mapping(function(fallback)
+    ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       else
@@ -41,7 +41,7 @@ cmp.setup {
       end
     end, { "i", "s" }),
 
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
+    ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
       else
@@ -49,50 +49,47 @@ cmp.setup {
       end
     end, { "i", "s" }),
 
-    ['<CR>'] = cmp.mapping.confirm {
+    ["<CR>"] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
-    },
+    }),
   },
 
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
-    end
+    end,
   },
 
   sources = {
-    { name = 'nvim_lsp' },
-    { name = 'treesitter' },
-    { name = 'buffer' },
+    { name = "nvim_lsp" },
+    { name = "treesitter" },
+    { name = "buffer" },
     { name = "luasnip" },
     { name = "nvim_lua" },
     { name = "path" },
     { name = "nvim_lsp_signature_help" },
   },
-}
+})
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline('/', {
+cmp.setup.cmdline("/", {
   sources = {
-    { name = 'buffer' }
-  }
+    { name = "buffer" },
+  },
 })
 
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline(':', {
+cmp.setup.cmdline(":", {
+  mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
-    { name = 'path' }
+    { name = "path" },
   }, {
-    { name = 'cmdline' }
-  })
+    { name = "cmdline" },
+  }),
 })
 
-
 -- Insert `(` after select function or method item
-cmp.event:on(
-  'confirm_done',
-  cmp_autopairs.on_confirm_done()
-)
+cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
 require("luasnip.loaders.from_vscode").lazy_load()

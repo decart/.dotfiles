@@ -29,6 +29,8 @@ require('packer').startup(function (use)
   use { 'mattn/emmet-vim' }
   use { 'terryma/vim-expand-region' }
 
+  use { 'stevearc/aerial.nvim' }
+
   -- UI
   use { 'MunifTanjim/nui.nvim' }
   use { 'nvim-lualine/lualine.nvim' }
@@ -51,9 +53,7 @@ require('packer').startup(function (use)
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use { 'nvim-telescope/telescope-project.nvim' }
 
-  -- use { 'kyazdani42/nvim-tree.lua' }  -- Tree view
   use { 'nvim-neo-tree/neo-tree.nvim' } -- Tree view
-  -- use { 'glepnir/dashboard-nvim' }
   use { 'mhinz/vim-startify' }
   use { 'phaazon/hop.nvim' }
   use { 'rhysd/git-messenger.vim' }
@@ -72,10 +72,12 @@ require('packer').startup(function (use)
   use { 'rafamadriz/friendly-snippets' }
 
 
+  -- Mappings
   use { 'tpope/vim-surround' }
   use { 'folke/which-key.nvim' }
+  use { 'max397574/better-escape.nvim' }
 
   -- Tmux
-  use { 'christoomey/vim-tmux-navigator' }
+  -- use { 'christoomey/vim-tmux-navigator' }
 
 end)
