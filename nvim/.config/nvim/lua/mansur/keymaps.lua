@@ -1,9 +1,6 @@
 local keymap = require('mansur.utils').map
 local dap = require('dap')
 
-keymap('i', 'jk', '<Esc>')
-keymap('i', 'jj', '<Esc>')
-
 -- Leader to <Space>
 keymap('', '<Space>', '<Nop>')
 vim.g.mapleader = ' '
@@ -32,8 +29,8 @@ keymap('n', '<C-Left>', ':vertical resize -5<cr>')
 keymap('n', '<C-Right>', ':vertical resize +5<cr>')
 keymap('n', '<C-Up>', ':resize -5<cr>')
 keymap('n', '<C-Down>', ':resize +5<cr>')
-keymap('n', '<C-\\>', ':vsplit %<cr>')
-keymap('n', '<A-\\>', ':split %<cr>')
+keymap('n', '|', ':vsplit %<cr>')
+keymap('n', '<C-|>', ':split %<cr>')
 
 -- Telescope
 keymap('n', '<C-p>', ':Telescope find_files<cr>')
@@ -67,8 +64,8 @@ keymap('v', 'K', '<Plug>(expand_region_expand)')
 keymap('v', 'J', '<Plug>(expand_region_shrink)')
 
 -- Neotree
--- keymap('n', '<C-b>', ':Neotree toggle<cr>')
-keymap('n', '<C-b>', ':NvimTreeToggle<cr>')
+keymap('n', '<C-b>', '<cmd>NeoTreeShowToggle<cr>')
+-- keymap('n', '<C-b>', ':NvimTreeToggle<cr>')
 
 -- HOP
 keymap('n', 's', ':HopChar1<cr>')

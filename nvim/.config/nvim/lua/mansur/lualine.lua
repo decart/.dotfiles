@@ -11,7 +11,7 @@ require('lualine').setup {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_x = {'aerial', 'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
@@ -19,7 +19,7 @@ require('lualine').setup {
     lualine_a = {},
     lualine_b = {},
     lualine_c = {'filename'},
-    lualine_x = {'location'},
+    lualine_x = {},
     lualine_y = {},
     lualine_z = {}
   },
@@ -29,5 +29,6 @@ require('lualine').setup {
     'neo-tree',
     'toggleterm',
     'nvim-dap-ui',
+    'aerial',
   }
 }
