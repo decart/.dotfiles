@@ -1,12 +1,14 @@
 local M = {}
 
-M.map = function(mode, keybinds, command, opts)
+M.map = function(modes, keybinds, command, opts)
   local options = { noremap = true, silent = true }
   if opts then
     options = vim.tbl_extend('force', options, opts)
   end
 
-  vim.keymap.set(mode, keybinds, command, options)
+  for mode in modes:gmatch(".") do
+    vim.keymap.set(mode, keybinds, command, options)
+  end
 end
 
 M.bg = function(group, default)

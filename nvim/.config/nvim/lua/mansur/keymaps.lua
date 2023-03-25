@@ -9,23 +9,19 @@ vim.g.mapleader = ' '
 keymap('n', 'Q', '@@')
 
 -- Disable yank of some commands
-keymap('n', 'x', '"_x')
-keymap('n', 'c', '"_c')
-keymap('n', 'D', '"_D')
-keymap('v', 'x', '"_x')
-keymap('v', 'c', '"_c')
-keymap('v', 'D', '"_D')
+keymap('nv', 'x', '"_x')
+keymap('nv', 'c', '"_c')
+keymap('nv', 'D', '"_D')
+keymap('v', 'p', '"0p')
+keymap('v', 'P', '"0P')
+keymap('v', 'y', '"0y')
 
 -- Move by soft wrapped lines
 keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { noremap = true, expr = true, silent = true })
 keymap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { noremap = true, expr = true, silent = true })
 
-keymap('n', 'H', '^')
-keymap('v', 'H', '^')
-keymap('o', 'H', '^')
-keymap('n', 'L', 'g_')
-keymap('v', 'L', 'g_')
-keymap('o', 'L', 'g_')
+keymap('nvo', 'H', '^')
+keymap('nvo', 'L', 'g_')
 
 -- Window navigation
 keymap('n', '<C-h>', ':wincmd h<cr>')
