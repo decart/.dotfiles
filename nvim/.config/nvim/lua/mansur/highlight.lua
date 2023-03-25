@@ -12,8 +12,9 @@ require('dracula').setup({
     NvimTreeGitNew =      { fg = "#b5bd68" },
     NvimTreeGitDeleted =  { link = "NvimTreeLspDiagnosticsError" },
 
-    PmenuSel =  { bg = "#282C34", fg = "NONE" },
-    Pmenu =     { fg = "#C5CDD9", bg = "#22252A" },
+    PmenuSel  = { bg = "#3e4452", fg = "NONE" },
+    Pmenu     = { fg = "#C5CDD9", bg = "#282a36" },
+
 
     CmpItemAbbrDeprecated = { fg = "#7E8294", bg = "NONE", strikethrough = true },
     CmpItemAbbrMatch =      { fg = "#82AAFF", bg = "NONE", bold = true },
