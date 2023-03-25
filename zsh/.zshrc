@@ -53,9 +53,6 @@ unsetopt beep
 [ -f ~/.zsh_plugins.sh ] && . ~/.zsh_plugins.sh
 [ -f ~/.zinit.sh ] && . ~/.zinit.sh
 
-# Homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 if [ -s ~/.di4am0nd.omp.json ]; then
   # eval "$(oh-my-posh prompt init zsh --config ~/.mansur.omp.json)"
   eval "$(oh-my-posh prompt init zsh --config ~/.di4am0nd.omp.json)"
