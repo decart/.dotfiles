@@ -20,6 +20,13 @@ keymap('v', 'D', '"_D')
 keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { noremap = true, expr = true, silent = true })
 keymap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { noremap = true, expr = true, silent = true })
 
+keymap('n', 'H', '^')
+keymap('v', 'H', '^')
+keymap('o', 'H', '^')
+keymap('n', 'L', 'g_')
+keymap('v', 'L', 'g_')
+keymap('o', 'L', 'g_')
+
 -- Window navigation
 keymap('n', '<C-h>', ':wincmd h<cr>')
 keymap('n', '<C-j>', ':wincmd j<cr>')
