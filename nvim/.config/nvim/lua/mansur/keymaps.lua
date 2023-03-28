@@ -12,9 +12,7 @@ keymap('n', 'Q', '@@')
 keymap('nv', 'x', '"_x')
 keymap('nv', 'c', '"_c')
 keymap('nv', 'D', '"_D')
-keymap('v', 'p', '"0p')
-keymap('v', 'P', '"0P')
-keymap('v', 'y', '"0y')
+keymap('v', 'p', '"_dP')
 
 -- Move by soft wrapped lines
 keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { noremap = true, expr = true, silent = true })
