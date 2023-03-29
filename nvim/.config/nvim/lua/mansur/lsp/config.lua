@@ -1,4 +1,3 @@
-require("mason").setup()
 require("mansur.lsp.null-ls")
 
 local lspconfig = require("lspconfig")

@@ -15,7 +15,6 @@ require('dracula').setup({
     PmenuSel  = { bg = "#3e4452", fg = "NONE" },
     Pmenu     = { fg = "#C5CDD9", bg = "#202020" },
 
-
     CmpItemAbbrDeprecated = { fg = "#7E8294", bg = "NONE", strikethrough = true },
     CmpItemAbbrMatch =      { fg = "#82AAFF", bg = "NONE", bold = true },
     CmpItemAbbrMatchFuzzy = { fg = "#82AAFF", bg = "NONE", bold = true },

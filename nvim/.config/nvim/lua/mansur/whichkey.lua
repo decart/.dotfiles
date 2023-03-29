@@ -8,7 +8,7 @@ local lazygit = Terminal:new({
   cmd = "lazygit",
   direction = "float",
   float_opts = {
-    border = "double",
+    border = "rounded",
   },
   hidden = true
 })

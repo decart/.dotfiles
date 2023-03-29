@@ -1,4 +1,5 @@
 require('mansur.lsp.diagnostic')
+require('mansur.lsp.mason')
 require('mansur.lsp.config').setup_servers()
 require('mansur.lsp.dap')
 
