@@ -1,3 +1,1 @@
-require('marks').setup({
-  builtin_marks = { ".", "[" },
-})
+require('marks').setup()
