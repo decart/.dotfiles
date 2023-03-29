@@ -14,9 +14,6 @@ else
   source nix.sh
 fi
 
-# Install homebrew packages
-source homebrew.sh
-
 # Install rust packages
 source rust.sh
 
@@ -30,6 +27,7 @@ stow zsh
 stow git
 stow nvim
 stow topgrade
+stow lazygit
 
 cp .zenv ~/.zenv
 
