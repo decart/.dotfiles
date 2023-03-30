@@ -27,6 +27,7 @@ sudo apt -y install \
 
 sudo apt -y install software-properties-common
 sudo add-apt-repository -y ppa:ondrej/php
+sudo add-apt-repository -y ppa:ondrej/nginx
 sudo apt update
 
 # Install php7.4
