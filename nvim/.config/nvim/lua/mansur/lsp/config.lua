@@ -7,7 +7,7 @@ local map = require("mansur.utils").map
 
 local M = {}
 
-M.servers = { "pyright", "tsserver", "jsonls", "html", "cssls", "lua_ls", "phpactor", "vimls", "vuels", "tailwindcss", "prismals" }
+M.servers = { "pyright", "tsserver", "jsonls", "html", "cssls", "lua_ls", "phpactor", "vimls", "volar", "tailwindcss", "prismals" }
 
 function M.on_attach()
   map("n", "gD", vim.lsp.buf.declaration)
@@ -20,7 +20,7 @@ end
 function M.setup_servers()
   require("mason-lspconfig").setup({
     ensure_installed = M.servers,
-    automatic_installation = true,
+    automatic_installation = false,
   })
 
   require("mason-lspconfig").setup_handlers({
