@@ -1,3 +1,3 @@
-vim.g.bufferline = {
+require('barbar').setup({
   auto_hide = true,
-}
+})
