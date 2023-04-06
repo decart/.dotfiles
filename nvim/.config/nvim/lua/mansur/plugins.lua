@@ -73,7 +73,7 @@ require('packer').startup(function (use)
 
 
   -- Mappings
-  use { 'tpope/vim-surround' }
+  use { 'kylechui/nvim-surround' }
   use { 'folke/which-key.nvim' }
   use { 'max397574/better-escape.nvim' }
 
