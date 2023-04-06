@@ -26,7 +26,7 @@ require('packer').startup(function (use)
   use { 'windwp/nvim-ts-autotag' }
   use { 'numToStr/Comment.nvim' }
   use { 'JoosepAlviste/nvim-ts-context-commentstring' }
-  use { 'mattn/emmet-vim' }
+  -- use { 'mattn/emmet-vim' }
   use { 'terryma/vim-expand-region' }
 
   use { 'stevearc/aerial.nvim' }

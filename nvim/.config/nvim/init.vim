@@ -60,12 +60,7 @@ lua require('mansur.plugins')
 
 
 let g:neovide_cursor_animation_length=0.05
-
 let g:suda_smart_edit = 1 " Sudo write
-
-let g:user_emmet_mode='a'
-let g:user_emmet_expandabbr_key = '<C-e>'
-
 let g:expand_region_text_objects = get(g:, 'expand_region_text_objects', {
           \ 'iw'  :0,
           \ 'iW'  :0,

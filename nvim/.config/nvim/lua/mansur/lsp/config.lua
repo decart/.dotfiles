@@ -7,7 +7,20 @@ local map = require("mansur.utils").map
 
 local M = {}
 
-M.servers = { "pyright", "tsserver", "jsonls", "html", "cssls", "lua_ls", "phpactor", "vimls", "volar", "tailwindcss", "prismals" }
+M.servers = { 
+  "pyright",
+  "tsserver",
+  "jsonls",
+  "html",
+  "cssls",
+  "emmet_ls",
+  "lua_ls",
+  "phpactor",
+  "vimls",
+  "volar",
+  "tailwindcss",
+  "prismals",
+}
 
 function M.on_attach()
   map("n", "gD", vim.lsp.buf.declaration)
@@ -30,6 +43,7 @@ function M.setup_servers()
         capabilities = capabilities,
       })
     end,
+
     -- Next, you can provide a dedicated handler for specific servers.
     ["lua_ls"] = function()
       lspconfig.lua_ls.setup({
@@ -44,6 +58,12 @@ function M.setup_servers()
             },
           },
         },
+      })
+    end,
+
+    ["emmet_ls"] = function()
+      lspconfig.emmet_ls.setup({
+        filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
       })
     end,
   })
