@@ -7,7 +7,6 @@ require('mason-nvim-dap').setup({
   automatic_setup = true,
 })
 
-require('mason-nvim-dap').setup_handlers()
 require('dap.ext.vscode').load_launchjs(nil, { node = { 'javascript', 'typescript' }})
 
 dap.adapters.node = {
