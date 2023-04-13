@@ -10,6 +10,7 @@ telescope.setup {
       '--column',
       '--smart-case',
     },
+    file_ignore_patterns = { 'node_modules' },
     sorting_strategy = "ascending",
     layout_config = {
       prompt_position = 'top',
