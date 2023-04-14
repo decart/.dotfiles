@@ -16,3 +16,7 @@ function gitcheck() {
   done
 }
 
+function todos() {
+  rg todo | sd -f i '(\w+):.*todo.{4}+:\s+(.*)' '$1: $2'
+}
+

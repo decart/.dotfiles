@@ -13,6 +13,7 @@ sudo apt -y install \
   zsh \
   zip \
   unzip \
+  p7zip-full \
   git \
   stow \
   python3-full \
