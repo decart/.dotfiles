@@ -34,6 +34,20 @@ lspkind.init({
     Unit          = "",
     Value         = "",
     Variable      = "",
+
+    Array         = " ",
+    Boolean       = " ",
+    Collapsed     = " ",
+    Key           = " ",
+    Namespace     = " ",
+    Null          = " ",
+    Number        = " ",
+    Object        = " ",
+    Package       = " ",
+    String        = " ",
+    Comment       = "󰅺",
+
+    VariableBuiltin  = "",
   },
 })
 
