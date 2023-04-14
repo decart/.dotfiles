@@ -29,9 +29,9 @@
           "type": "git"
         },
         {
-          "foreground": "#ff4c30",
+          "foreground": "#98C379",
           "foreground_templates": [
-            "{{ if .Mismatch }}#98C379{{ end }}"
+            "{{ if .Mismatch }}#ff4c30{{ end }}"
           ],
           "properties": {
             "fetch_version": true

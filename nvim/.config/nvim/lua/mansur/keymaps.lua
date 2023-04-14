@@ -69,4 +69,5 @@ keymap('n', '<C-b>', '<cmd>NeoTreeShowToggle<cr>')
 -- keymap('n', '<C-b>', ':NvimTreeToggle<cr>')
 
 -- HOP
-keymap('n', 's', ':HopChar1<cr>')
+keymap('n', 's', require('mansur.hop.word-start').hint_word_start)
+keymap('n', 'S', ':HopChar1<cr>')
