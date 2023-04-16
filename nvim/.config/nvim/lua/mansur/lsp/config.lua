@@ -33,7 +33,7 @@ end
 function M.setup_servers()
   require("mason-lspconfig").setup({
     ensure_installed = M.servers,
-    automatic_installation = false,
+    automatic_installation = true,
   })
 
   require("mason-lspconfig").setup_handlers({
