@@ -36,7 +36,11 @@ function M.hint_word_start(opts)
   end
 
   local regex = '\\<' .. char
-  if (vim.o.smartcase and not starts_with_uppercase(char)) or opts.case_insensitive then
+  if vim.o.smartcase then
+    if not starts_with_uppercase(char) then
+      regex = '\\c' .. regex
+    end
+  elseif opts.case_insensitive then
     regex = '\\c' .. regex
   end
 
