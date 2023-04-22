@@ -47,6 +47,7 @@ export EDITOR='nvim'
 export NVM_DIR="$HOME/.nvm"
 export NVM_COMPLETION=true
 export DENO_INSTALL="$HOME/.deno"
+export FZF_DEFAULT_OPTS="--border=rounded --marker=\" \" --color=gutter:0,hl:#ff0000,hl+:#ff0000,marker:#76FF03"
 
 export PATH="$HOME/.dotfiles/bin:$PATH"
 export PYTHON_ENV_DIR="$HOME/data/python/.envs"

@@ -3,24 +3,20 @@ function sapt {
 }
 
 function fapt() {
-  local pkg
-  pkg=$(apt-cache search '.*' | fzf -m | awk '{print $1}')
+  pkg=$(echo $(apt-cache search '.*' | fzf --margin=1,20% -m | awk '{print $1}'))
+  
   if [[ -n "$pkg" ]]; then
-    sudo apt install $(echo $pkg)
-    return 0
+    cmd="sudo apt install $pkg"
+    print -s $cmd; eval $cmd;
   fi
-
-  echo "Canceled..."
 }
 
 function fnpm() {
-  local pkg
-  pkg=$(all-the-package-names | fzf -m)
-  if [[ -n "$pkg" ]]; then
-    npm i $(echo $pkg)
-    return 0
-  fi
+  pkg=$(echo $(all-the-package-names | --margin=1,20% fzf -m))
 
-  echo "Canceled..."
+  if [[ -n "$pkg" ]]; then
+    cmd="npm i $pkg"
+    print -s $cmd; eval $cmd
+  fi
 }
 
