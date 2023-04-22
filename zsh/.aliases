@@ -1,6 +1,7 @@
 # open ~/.zshrc in using the default editor specified in $EDITOR
 alias ec="$EDITOR $HOME/.zshrc"
 alias ea="$EDITOR $HOME/.aliases"
+alias viconf="nvim ~/.config/nvim"
 
 # source ~/.zshrc
 alias sc="source $HOME/.zshrc"
