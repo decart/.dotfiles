@@ -23,7 +23,7 @@ set nohlsearch
 set splitbelow
 set splitright
 set hidden
-set scrolloff=8
+set scrolloff=10
 set undofile
 set mouse=
 set ignorecase

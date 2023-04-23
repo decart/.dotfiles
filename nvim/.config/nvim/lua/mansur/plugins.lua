@@ -18,9 +18,7 @@ local packer_bootstrap = ensure_packer()
 
 require('packer').startup(function (use)
   use { 'wbthomason/packer.nvim' }
-
   use { 'gpanders/editorconfig.nvim' }
-
   use { 'akinsho/toggleterm.nvim' }
   use { 'lambdalisue/suda.vim' }
 
@@ -29,19 +27,16 @@ require('packer').startup(function (use)
   use { 'williamboman/mason.nvim' }
   use { 'williamboman/mason-lspconfig.nvim' }
   use { 'jayp0521/mason-nvim-dap.nvim' }
-
-  use { 'nvim-treesitter/nvim-treesitter', run = TSUpdate}
-  use { 'jose-elias-alvarez/null-ls.nvim' }
   use { 'jayp0521/mason-null-ls.nvim' }
+  use { 'jose-elias-alvarez/null-ls.nvim' }
+  use { 'nvim-treesitter/nvim-treesitter', run = TSUpdate}
   use { 'neovim/nvim-lspconfig' }
   use { 'onsails/lspkind-nvim' }
 
   use { 'windwp/nvim-ts-autotag' }
   use { 'numToStr/Comment.nvim' }
   use { 'JoosepAlviste/nvim-ts-context-commentstring' }
-  -- use { 'mattn/emmet-vim' }
   use { 'terryma/vim-expand-region' }
-
   use { 'stevearc/aerial.nvim' }
 
   -- UI
@@ -52,6 +47,7 @@ require('packer').startup(function (use)
   use { 'romgrk/barbar.nvim' }
   use { 'chentoast/marks.nvim' }
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use { 'Aasim-A/scrollEOF.nvim' }
 
   -- Color theme
   use { 'gruvbox-community/gruvbox' }
@@ -89,9 +85,6 @@ require('packer').startup(function (use)
   use { 'kylechui/nvim-surround' }
   use { 'folke/which-key.nvim' }
   use { 'max397574/better-escape.nvim' }
-
-  -- Tmux
-  -- use { 'christoomey/vim-tmux-navigator' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

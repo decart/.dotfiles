@@ -21,3 +21,4 @@ require('mansur/indent-blankline')
 require('mansur/autopairs')
 require('mansur/whichkey')
 require('mansur/filetypes')
+require('mansur/scrolleoff');
