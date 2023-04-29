@@ -10,9 +10,7 @@ for _, sign in ipairs(signs) do
 end
 
 local config = {
-  -- disable virtual text
-  -- virtual_text = false,
-  virtual_text = { prefix = '•' },
+  virtual_text = { source = 'if_many', prefix = '•' },
   signs = { active = signs },
   update_in_insert = true,
   underline = true,

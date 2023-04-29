@@ -21,6 +21,7 @@ require('packer').startup(function (use)
   use { 'gpanders/editorconfig.nvim' }
   use { 'akinsho/toggleterm.nvim' }
   use { 'lambdalisue/suda.vim' }
+  use { 'anuvyklack/pretty-fold.nvim' }
 
   -- Laguages
   use { 'mfussenegger/nvim-dap' }

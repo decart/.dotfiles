@@ -8,6 +8,11 @@ require('dracula').setup({
     DiagnosticError = { fg = "#F44336" },
     DiagnosticWarn =  { fg = "#b27300" },
 
+    DiagnosticVirtualTextHint = { fg = "#3e4452" },
+    DiagnosticVirtualTextInfo = { fg = "#3e4452" },
+    DiagnosticVirtualTextWarn = { fg = "#3e4452" },
+    DiagnosticVirtualTextError = { fg = "#3e4452" },
+
     NvimTreeGitDirty =    { fg = "#f0c674" },
     NvimTreeGitNew =      { fg = "#b5bd68" },
     NvimTreeGitDeleted =  { link = "NvimTreeLspDiagnosticsError" },

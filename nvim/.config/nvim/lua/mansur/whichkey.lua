@@ -1,8 +1,9 @@
-local wk         = require('which-key')
-local Terminal   = require('toggleterm.terminal').Terminal
-local dap        = require('dap')
-local dapui      = require('dapui')
-local telescope  = require('telescope.builtin')
+local wk          = require('which-key')
+local Terminal    = require('toggleterm.terminal').Terminal
+local dap         = require('dap')
+local dapui       = require('dapui')
+local telescope   = require('telescope.builtin')
+local lsp_options = require('mansur.lsp.options')
 
 local lazygit = Terminal:new({
   cmd = "lazygit",
@@ -47,7 +48,7 @@ wk.register({
     q = { telescope.quickfix, 'Quick fix' },
     t = { telescope.filetypes, 'Change file type' },
     s = { telescope.treesitter, 'Buffer symbols' },
-    f = { function() vim.lsp.buf.format({ async = true, timeout_ms = 2000 }) end, 'Format code' },
+    f = { lsp_options.async_format, 'Format code' },
     R = { '<cmd>LspRestart<cr>', 'Restart' },
   },
   d = {

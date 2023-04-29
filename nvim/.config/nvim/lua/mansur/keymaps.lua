@@ -61,8 +61,8 @@ keymap('v', '<A-j>', ':move \'>+1<CR>gv-gv')
 keymap('v', '<A-k>', ':move \'<-2<CR>gv-gv')
 
 -- Expand selection
-keymap('v', 'K', '<Plug>(expand_region_expand)')
-keymap('v', 'J', '<Plug>(expand_region_shrink)')
+keymap('v', '+', '<Plug>(expand_region_expand)')
+keymap('v', '_', '<Plug>(expand_region_shrink)')
 
 -- Neotree
 keymap('n', '<C-b>', '<cmd>NeoTreeShowToggle<cr>')

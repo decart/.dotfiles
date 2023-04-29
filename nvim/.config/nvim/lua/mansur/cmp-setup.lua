@@ -3,52 +3,10 @@ local lspkind = require("lspkind")
 local luasnip = require("luasnip")
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 
-vim.o.completeopt = "menuone,noselect"
-
 lspkind.init({
   mode = "symbol_text",
   maxwidth = 45,
-  symbol_map = {
-    Class         = "",
-    Color         = "",
-    Constant      = "",
-    Constructor   = "",
-    Enum          = "",
-    EnumMember    = "",
-    Event         = "",
-    Field         = "ﰠ",
-    File          = "",
-    Folder        = "",
-    Function      = "",
-    Interface     = "",
-    Keyword       = "",
-    Method        = "ƒ",
-    Module        = "",
-    Operator      = "",
-    Property      = "",
-    Reference     = "",
-    Snippet       = "",
-    Struct        = "פּ",
-    Text          = "",
-    TypeParameter = "",
-    Unit          = "",
-    Value         = "",
-    Variable      = "",
-
-    Array         = " ",
-    Boolean       = " ",
-    Collapsed     = " ",
-    Key           = " ",
-    Namespace     = " ",
-    Null          = " ",
-    Number        = " ",
-    Object        = " ",
-    Package       = " ",
-    String        = " ",
-    Comment       = "󰅺",
-
-    VariableBuiltin  = "",
-  },
+  symbol_map = require('mansur.icons').cmp,
 })
 
 cmp.setup({

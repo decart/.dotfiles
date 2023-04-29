@@ -1,3 +1,4 @@
+require('mansur/vim')
 require('mansur/keymaps')
 require('mansur/better-escape')
 require('mansur/clipboard')

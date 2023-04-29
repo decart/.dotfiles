@@ -1,4 +1,6 @@
 local null_ls = require('null-ls')
+local opts = require('mansur.lsp.options')
+
 null_ls.setup({
   sources = {
     null_ls.builtins.formatting.fixjson,
@@ -9,7 +11,7 @@ null_ls.setup({
 })
 
 require('mason-null-ls').setup({
-  ensure_installed = { 'stylua', 'fixjson', 'blade', 'shellcheck' },
+  ensure_installed = opts.null_ls_sources,
   automatic_installation = true,
   automatic_setup = true
 })
