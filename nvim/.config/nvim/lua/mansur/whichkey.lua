@@ -22,14 +22,22 @@ wk.register({
   e = { '<cmd>Neotree filesystem reveal<cr>', 'Current file in explorer' },
   c = { '<cmd>BufferClose<cr>', 'Close buffer' },
   o = { '<cmd>AerialToggle<cr>', 'Show outline' },
+  f = {
+    name = 'Fold',
+    c = { 'zc', 'Close fold' },
+    m = { 'zM', 'Close all folds' },
+    o = { 'zo', 'Open fold' },
+    O = { 'zO', 'Open folds recursive' },
+    r = { 'zR', 'Open all folds' },
+  },
   b = {
     name = 'Buffer',
     b = { '<cmd>BufferPick<cr>', 'Pick buffer' },
     d = { '<cmd>BufferPickDelete<cr>', 'Pick delete' },
     l = { telescope.buffers, 'List' }
   },
-  f = {
-    name = 'Find',
+  s = {
+    name = 'Search',
     f = { telescope.find_files, 'Find file' },
     s = { telescope.lsp_workspace_symbols, 'Symbols' },
     r = { telescope.oldfiles, 'Open recent file' },
