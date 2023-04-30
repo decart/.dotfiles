@@ -4,6 +4,7 @@ local api = vim.api
 
 opt.foldmethod = 'expr'
 opt.foldexpr = 'nvim_treesitter#foldexpr()'
+opt.foldtext = 'v:lua.require("mansur.fold").foldtext()'
 opt.foldenable = true
 opt.completeopt = 'menuone,noselect'
 
@@ -15,7 +16,6 @@ end
 local disableRelativeNumbers = function ()
   if (opt.nu) then opt.rnu = false end
 end
-
 
 usr.auGroupedCommands({
   LineNumbers = {
