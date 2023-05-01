@@ -4,7 +4,10 @@ echo "====== UBUNTU ======"
 
 sudo apt update
 # Install Linux build essential
-sudo apt -y install llvm clang build-essential linux-headers-"$(uname -r)"
+sudo apt -y install llvm
+sudo apt -y install clang
+sudo apt -y install build-essential
+sudo apt -y install linux-headers-"$(uname -r)"
 
 # Install server
 sudo apt -y install \
