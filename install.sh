@@ -6,7 +6,8 @@ source utils.sh
 ## INSTALL PACKAGES ##
 ######################
 
-if [[ $(release_name) == "ubuntu" ]]; then
+release=$(release_name)
+if [[ ($release == "ubuntu" || $release == "neon") ]]; then
   source ubuntu.sh
 elif [[ $(release_name) == "fedora" ]]; then
   source fedora.sh
