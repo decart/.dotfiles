@@ -9,7 +9,6 @@ sudo apt -y install llvm clang build-essential linux-headers-"$(uname -r)"
 # Install server
 sudo apt -y install \
   curl \
-  fuse \
   zsh \
   zip \
   unzip \
