@@ -1,7 +1,7 @@
 require('mansur/vim')
 require('mansur/keymaps')
 require('mansur/better-escape')
-require('mansur/clipboard')
+-- require('mansur/clipboard')
 require('mansur/surround')
 require('mansur/highlight')
 require('mansur/web-devicons')
