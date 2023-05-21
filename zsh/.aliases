@@ -49,7 +49,7 @@ alias artdb='art migrate:reset && art migrate && art db:seed && art ide-helper:m
 alias rcp='rsync -rzv'
 alias top='ytop'
 alias h='tldr'
-alias cd='z'
+# alias cd='z'
 
 # Docker
 alias dc="docker-compose"
