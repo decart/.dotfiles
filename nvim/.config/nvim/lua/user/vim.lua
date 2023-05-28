@@ -1,10 +1,10 @@
-local usr = require('mansur.utils')
+local usr = require('user.utils')
 local opt = vim.opt
 local api = vim.api
 
 opt.foldmethod = 'expr'
 opt.foldexpr = 'nvim_treesitter#foldexpr()'
-opt.foldtext = 'v:lua.require("mansur.fold").foldtext()'
+opt.foldtext = 'v:lua.require("user.fold").foldtext()'
 opt.foldenable = true
 opt.completeopt = 'menuone,noselect'
 

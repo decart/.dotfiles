@@ -1,4 +1,4 @@
-local map = require("mansur.utils").map
+local map = require("user.utils").map
 local telescope = require("telescope.builtin")
 
 local lsp_augroup = vim.api.nvim_create_augroup('LSPUser', {})

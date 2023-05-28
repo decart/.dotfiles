@@ -1,4 +1,4 @@
-local keymap = require('mansur.utils').map
+local keymap = require('user.utils').map
 local dap = require('dap')
 
 -- Leader to <Space>
@@ -69,5 +69,5 @@ keymap('n', '<C-b>', '<cmd>NeoTreeShowToggle<cr>')
 -- keymap('n', '<C-b>', ':NvimTreeToggle<cr>')
 
 -- HOP
-keymap('n', 's', require('mansur.hop.word-start').hint_word_start)
+keymap('n', 's', require('user.hop.word-start').hint_word_start)
 keymap('n', 'S', ':HopChar1<cr>')

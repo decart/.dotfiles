@@ -3,7 +3,7 @@ local Terminal    = require('toggleterm.terminal').Terminal
 local dap         = require('dap')
 local dapui       = require('dapui')
 local telescope   = require('telescope.builtin')
-local lsp_options = require('mansur.lsp.options')
+local lsp_options = require('user.lsp.options')
 
 local lazygit = Terminal:new({
   cmd = "lazygit",

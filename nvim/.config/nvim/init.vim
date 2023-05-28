@@ -36,7 +36,7 @@ set listchars=lead:·,tab:▷ ,trail:·,extends:◣,precedes:◢,nbsp:○
 set list
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
 
-lua require('mansur.plugins')
+lua require('user.plugins')
 
 let g:suda_smart_edit = 1 " Sudo write
 let g:expand_region_text_objects = get(g:, 'expand_region_text_objects', {
@@ -52,5 +52,5 @@ let g:expand_region_text_objects = get(g:, 'expand_region_text_objects', {
           \ 'ie'  :0,
           \})
 
-lua require('mansur')
+lua require('user')
 

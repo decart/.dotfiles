@@ -1,5 +1,5 @@
 local hop = require('hop')
-local options = require('mansur.hop.opts')
+local options = require('user.hop.opts')
 local jump_target = require('hop.jump_target')
 
 local function starts_with_uppercase(s)

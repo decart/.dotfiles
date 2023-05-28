@@ -1,6 +1,6 @@
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 local mason_lspconfig = require('mason-lspconfig')
-local opts = require('mansur.lsp.options')
+local opts = require('user.lsp.options')
 local lspconfig = require('lspconfig')
 
 require('mason').setup({
@@ -19,7 +19,7 @@ mason_lspconfig.setup_handlers({
 })
 
 for _, server_name in ipairs(mason_lspconfig.get_installed_servers()) do
-  local ok, options = pcall(require, 'mansur/lsp/servers/' .. server_name)
+  local ok, options = pcall(require, 'user/lsp/servers/' .. server_name)
   if ok then
     require('lspconfig')[server_name].setup(options)
   end

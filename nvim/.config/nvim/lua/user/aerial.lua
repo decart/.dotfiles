@@ -12,5 +12,5 @@ require('aerial').setup({
     nested_top = "│ ",
     whitespace = "  ",
   },
-  icons = require('mansur.icons').cmp,
+  icons = require('user.icons').cmp,
 })

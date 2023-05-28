@@ -6,7 +6,7 @@ local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 lspkind.init({
   mode = "symbol_text",
   maxwidth = 45,
-  symbol_map = require('mansur.icons').cmp,
+  symbol_map = require('user.icons').cmp,
 })
 
 cmp.setup({

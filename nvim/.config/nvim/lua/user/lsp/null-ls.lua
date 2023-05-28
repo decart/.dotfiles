@@ -1,5 +1,5 @@
 local null_ls = require('null-ls')
-local opts = require('mansur.lsp.options')
+local opts = require('user.lsp.options')
 
 null_ls.setup({
   sources = {
