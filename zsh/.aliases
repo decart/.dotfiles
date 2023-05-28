@@ -9,12 +9,6 @@ alias sc="source $HOME/.zshrc"
 # navigation aliases
 alias tmp='cd ~/data/temp'
 
-# Server
-alias snginx="sudo service nginx start"
-alias sphp="sudo service php7.4-fpm start && sudo service php8.0-fpm start && sudo service php8.1-fpm start"
-alias smysql="sudo service mysql start"
-alias smhog="MailHog -ui-bind-addr 127.0.0.1:8085 -smtp-bind-addr 127.0.0.1:1025"
-
 # Files list
 alias l="exa --icons --group-directories-first -lFh"
 alias la="exa --icons --group-directories-first -laFh"
