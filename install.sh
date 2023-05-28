@@ -11,8 +11,6 @@ if [[ ($release == "ubuntu" || $release == "neon") ]]; then
   source ubuntu.sh
 elif [[ $(release_name) == "fedora" ]]; then
   source fedora.sh
-else
-  source nix.sh
 fi
 
 # Install rust packages
