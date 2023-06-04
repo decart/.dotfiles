@@ -89,3 +89,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # Deno
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+# Greeting
+neofetch --ascii "$(fortune ru | cowsay -W 30)" | lolcat
