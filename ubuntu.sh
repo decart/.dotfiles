@@ -20,11 +20,23 @@ sudo apt -y install \
   stow \
   python3-full \
   python3-pip \
+  meld \
   nginx \
   mariadb-server \
   mariadb-client \
   postgresql-all \
-  imagemagick
+  imagemagick \
+  djvulibre-bin \
+  mupdf-tools \
+  ctorrent \
+  gettext \
+  odt2txt \
+  isoinfo
+
+# Qt5
+sudo apt -y install \
+  libqt5pdfwidgets5 \
+  libqt5pdf5
 
 # Add php repository
 
