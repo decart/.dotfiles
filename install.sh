@@ -39,6 +39,6 @@ chmod +x bin/*
 ###############
 
 # Use zsh as default shell
-command -v zsh | sudo tee -a /etc/shells
-sudo chsh -s $(which zsh) $USER
+# command -v zsh | sudo tee -a /etc/shells
+# sudo chsh -s $(which zsh) $USER
 
