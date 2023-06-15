@@ -20,6 +20,8 @@ sudo apt -y install \
   stow \
   python3-full \
   python3-pip \
+  python3-dev \
+  python3-setuptools \
   meld \
   nginx \
   mariadb-server \
@@ -34,9 +36,7 @@ sudo apt -y install \
   isoinfo
 
 # Qt5
-sudo apt -y install \
-  libqt5pdfwidgets5 \
-  libqt5pdf5
+sudo apt install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
 
 # Add php repository
 
