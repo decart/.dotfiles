@@ -67,6 +67,8 @@ if [ -d /usr/local/go/bin ]; then
   export PATH="$(go env GOPATH)/bin:$PATH"
 fi
 
+$(thefuck --alias)
+
 eval "$(zoxide init zsh)"
 
 
@@ -91,3 +93,5 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Greeting
 # neofetch --ascii "$(fortune ru | cowsay -W 30)" | lolcat
+
+eval $(thefuck --alias)
