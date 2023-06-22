@@ -9,6 +9,8 @@ alias sc="source $HOME/.zshrc"
 # navigation aliases
 alias tmp='cd ~/data/temp'
 
+alias sctl='sudo systemctl'
+
 # Files list
 alias l="exa --icons --group-directories-first -lFh"
 alias la="exa --icons --group-directories-first -laFh"
