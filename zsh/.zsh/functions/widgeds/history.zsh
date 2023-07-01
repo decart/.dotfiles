@@ -3,7 +3,6 @@ function _fzf_hist {
 
   if [[ -n "$cmd" ]]; then
     BUFFER="$cmd"
-    zle accept-line
   fi
 }
 zle -N _fzf_hist

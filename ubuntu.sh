@@ -28,13 +28,16 @@ sudo apt -y install \
   mariadb-client \
   libmariadb-dev \
   postgresql-all \
-  imagemagick \
+  imagemagick
+
+sudo apt -y install\
   djvulibre-bin \
   mupdf-tools \
   ctorrent \
   gettext \
   odt2txt \
-  isoinfo
+  isoinfo \
+  thefuck
 
 # Qt5
 # sudo apt install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools

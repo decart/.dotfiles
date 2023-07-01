@@ -21,12 +21,14 @@ source github.sh
 
 # Sotow configs
 mkdir -p ~/.config/nvim
+mkdir -p ~/.config/doublecmd
 
 stow zsh
 stow git
 stow nvim
 stow topgrade
 stow lazygit
+stow doublecmd
 
 cp .zenv ~/.zenv
 
