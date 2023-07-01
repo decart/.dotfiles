@@ -26,6 +26,7 @@ sudo apt -y install \
   nginx \
   mariadb-server \
   mariadb-client \
+  libmariadb-dev \
   postgresql-all \
   imagemagick \
   djvulibre-bin \
@@ -36,7 +37,7 @@ sudo apt -y install \
   isoinfo
 
 # Qt5
-sudo apt install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
+# sudo apt install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
 
 # Add php repository
 
