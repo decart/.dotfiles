@@ -6,3 +6,9 @@ function usephp {
     sudo update-alternatives --set phar.phar "/usr/bin/phar.phar$version"
 }
 
+function get-composer {
+  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+  php composer-setup.php
+  php -r "unlink('composer-setup.php');"
+  chmod +x composer.phar
+}
