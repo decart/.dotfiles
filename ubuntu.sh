@@ -7,6 +7,8 @@ sudo apt update
 sudo apt -y install llvm
 sudo apt -y install clang
 sudo apt -y install build-essential
+sudo apt -y install pkg-config
+sudo apt -y install libssl-dev
 sudo apt -y install linux-headers-"$(uname -r)"
 
 # Install server
