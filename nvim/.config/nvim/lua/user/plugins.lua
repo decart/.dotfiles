@@ -66,7 +66,7 @@ require('packer').startup(function (use)
   use { 'nvim-neo-tree/neo-tree.nvim' } -- Tree view
   use { 'mhinz/vim-startify' }
   use { 'phaazon/hop.nvim' }
-  use { 'rhysd/git-messenger.vim' }
+  use { 'FabijanZulj/blame.nvim' }
   use { 'windwp/nvim-autopairs' }
 
 

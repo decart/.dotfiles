@@ -7,6 +7,7 @@ require('user.web-devicons')
 require('user.telescope')
 require('user.lualine')
 require('user.git-signs')
+require('user.git-blame')
 require('user.marks')
 require('user.neotree')
 require('user.aerial');
