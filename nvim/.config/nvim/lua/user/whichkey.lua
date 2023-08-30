@@ -69,7 +69,7 @@ wk.register({
   g = {
     name = 'Git',
     g = { function() lazygit:toggle() end, 'Lazy git' },
-    m = { '<Plug>(git-messenger)', 'Blame' },
+    b = { '<cmd>ToggleBlame<cr>', 'Blame' },
     s = { '<cmd>Neotree float git_status<cr>', 'Status'},
   },
   h = {
