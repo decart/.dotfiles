@@ -72,9 +72,8 @@ eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
 
 
+export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.local/bin:$HOME/.poetry/bin:$PATH"
-
-
 
 # pnpm
 export PNPM_HOME="/home/mansur/.local/share/pnpm"
