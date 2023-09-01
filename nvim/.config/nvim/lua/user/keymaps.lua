@@ -65,7 +65,7 @@ keymap('v', '+', '<Plug>(expand_region_expand)')
 keymap('v', '_', '<Plug>(expand_region_shrink)')
 
 -- Neotree
-keymap('n', '<C-b>', '<cmd>NeoTreeShowToggle<cr>')
+keymap('n', '<C-b>', '<cmd>Neotree filesystem toggle left<cr>')
 -- keymap('n', '<C-b>', ':NvimTreeToggle<cr>')
 
 -- HOP
