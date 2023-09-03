@@ -19,6 +19,7 @@ M.servers = {
   "volar",
   "tailwindcss",
   "prismals",
+  "eslint_d",
 }
 
 M.null_ls_sources = { 'stylua', 'fixjson', 'blade', 'shellcheck' }
