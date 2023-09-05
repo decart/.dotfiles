@@ -86,6 +86,7 @@ require('packer').startup(function (use)
   use { 'kylechui/nvim-surround' }
   use { 'folke/which-key.nvim' }
   use { 'max397574/better-escape.nvim' }
+  use { 'christoomey/vim-tmux-navigator' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

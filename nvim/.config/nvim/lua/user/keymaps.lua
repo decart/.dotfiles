@@ -22,10 +22,12 @@ keymap('nvo', 'H', '^')
 keymap('nvo', 'L', 'g_')
 
 -- Window navigation
-keymap('n', '<C-h>', ':wincmd h<cr>')
-keymap('n', '<C-j>', ':wincmd j<cr>')
-keymap('n', '<C-k>', ':wincmd k<cr>')
-keymap('n', '<C-l>', ':wincmd l<cr>')
+-- keymap('n', '<C-h>', ':wincmd h<cr>')
+-- keymap('n', '<C-j>', ':wincmd j<cr>')
+-- keymap('n', '<C-k>', ':wincmd k<cr>')
+-- keymap('n', '<C-l>', ':wincmd l<cr>')
+-- Now use tmux_navigator plugin: https://github.com/christoomey/vim-tmux-navigator
+
 keymap('n', '<C-Left>', ':vertical resize -5<cr>')
 keymap('n', '<C-Right>', ':vertical resize +5<cr>')
 keymap('n', '<C-Up>', ':resize -5<cr>')
