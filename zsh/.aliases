@@ -45,6 +45,7 @@ alias artdb='art migrate:reset && art migrate && art db:seed && art ide-helper:m
 alias rcp='rsync -rzv'
 alias top='ytop'
 alias h='tldr'
+alias cls='clear'
 # alias cd='z'
 
 # Docker
