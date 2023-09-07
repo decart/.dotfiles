@@ -3,9 +3,9 @@ preexec() {
     cmd=$(echo $2 | awk '{print $1;}')
 
     if [ -n "$TMUX" ]; then
-      tmux -2u rename-window "$cmd [#{b:pane_current_path}]";
+      tmux -2u rename-window "${cmd}[#{b:pane_current_path}]";
     else
-      echo -ne "\033]0;$cmd [$(basename ${PWD})]\007"
+      echo -ne "\033]0;${cmd}[$(basename ${PWD})]\007"
     fi
   fi
 }
