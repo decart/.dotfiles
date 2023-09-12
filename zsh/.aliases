@@ -10,6 +10,7 @@ alias sc="source $HOME/.zshrc"
 alias tmp='cd ~/data/temp'
 
 alias sctl='sudo systemctl'
+alias e='exit'
 
 # Files list
 alias l="exa --icons --group-directories-first -lFh"
