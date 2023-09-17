@@ -6,6 +6,7 @@ opt.foldmethod = 'expr'
 opt.foldexpr = 'nvim_treesitter#foldexpr()'
 opt.foldtext = 'v:lua.require("user.fold").foldtext()'
 opt.foldenable = true
+opt.foldlevel = 4
 opt.completeopt = 'menuone,noselect'
 
 local enableRelativeNumbers = function ()
