@@ -1,3 +1,7 @@
+function py {
+  cd "$HOME/data/python/$1"
+}
+
 function html {
   cd "$HOME/data/html/$1"
 }

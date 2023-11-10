@@ -1,0 +1,5 @@
+#compdef py
+
+function _py {
+  _values 'dirs' $(ls -l $HOME/data/python/ | grep "^d" | awk "{print \$9}")
+}
