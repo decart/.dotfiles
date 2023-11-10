@@ -1,5 +1,10 @@
-require("indent_blankline").setup {
-  show_current_context = true,
-  show_current_context_start = false,
-  char_list = { '│', '|', '¦', '┆', '┊' }
+require("ibl").setup {
+  indent = {
+    char = { '│', '|', '¦', '┆', '┊' },
+  },
+  scope = {
+    char = { '│', '|', '¦', '┆', '┊' },
+    -- show_start = false,
+    -- show_end = false
+  }
 }
