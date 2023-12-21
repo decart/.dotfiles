@@ -5,5 +5,11 @@ return {
   keys = {
     { "<C-f>", Util.telescope("live_grep"), desc = "Grep (root dir)" },
     { "<C-p>", Util.telescope("files"), desc = "Find Files (root dir)" },
-  }
+  },
+
+  opts = {
+    defaults = {
+      layout_config = { prompt_position = "top" },
+    },
+  },
 }
