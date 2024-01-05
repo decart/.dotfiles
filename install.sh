@@ -7,7 +7,7 @@ source utils.sh
 ######################
 
 release=$(release_name)
-if [[ ($release == "ubuntu" || $release == "neon") ]]; then
+if [[ ($release == "ubuntu" || $release == "neon" || $release == "linuxmint") ]]; then
   source ubuntu.sh
 elif [[ $(release_name) == "fedora" ]]; then
   source fedora.sh
