@@ -1,0 +1,15 @@
+Meld|org.gnome.meld
+Postman|com.getpostman.Postman
+DBeaver|io.dbeaver.DBeaverCommunity
+Telegram|org.telegram.desktop
+WhatsApp|io.github.mimbrero.WhatsAppDesktop
+Obsidian|md.obsidian.Obsidian
+OBS Studio|com.obsproject.Studio
+Elisa|org.kde.elisa
+GIMP|org.gimp.GIMP
+Inkscape|org.inkscape.Inkscape
+Krita|org.kde.krita
+Kdenlive|org.kde.kdenlive
+Glaxnimate|org.mattbas.Glaxnimate
+Blender|org.blender.Blender
+Godot|org.godotengine.Godot
