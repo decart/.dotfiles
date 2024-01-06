@@ -36,6 +36,16 @@ cp .zenv ~/.zenv
 sudo ln -s ~/.dotfiles/bin/* /usr/local/bin/
 chmod +x bin/*
 
+###################
+## INSTALL TOOLS ##
+###################
+echo $'\n\n\n\n\n'
+read -p "Do you want to install tools [Y/n]? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]?$ ]]; then
+	source tools.sh
+fi
+
 ###############
 ## CONFIG OS ##
 ###############
