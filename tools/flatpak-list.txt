@@ -1,6 +1,7 @@
 Meld|org.gnome.meld
 Postman|com.getpostman.Postman
 DBeaver|io.dbeaver.DBeaverCommunity
+SmartGit|com.syntevo.SmartGit
 Telegram|org.telegram.desktop
 WhatsApp|io.github.mimbrero.WhatsAppDesktop
 Obsidian|md.obsidian.Obsidian
