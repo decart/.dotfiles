@@ -29,7 +29,7 @@ sudo apt -y install \
   mariadb-server \
   mariadb-client \
   libmariadb-dev \
-  postgresql-all \
+  fzf \
   imagemagick
 
 sudo apt -y install\
