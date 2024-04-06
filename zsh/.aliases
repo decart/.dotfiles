@@ -11,6 +11,7 @@ alias tmp='cd ~/data/temp'
 
 alias sctl='sudo systemctl'
 alias e='exit'
+alias bt='bpytop'
 
 # Files list
 alias l="exa --icons --group-directories-first -lFh"
@@ -28,6 +29,7 @@ alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
 alias rg="rg -i -p"
 alias rga="rg -Lp --no-ignore --hidden"
 alias art="php artisan"
+alias sc="symfony console"
 alias sail="./vendor/bin/sail"
 alias d="dirs -v | head -10" # Directory history
 alias 1='cd -'

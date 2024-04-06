@@ -9,9 +9,13 @@ ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 ZSH_PECO_HISTORY_OPTS="--layout=bottom-up --initial-filter=Fuzzy"
 
+# To view keycodes: showkey -a
 # bindkey '^ ' autosuggest-accept
 bindkey '^e' autosuggest-accept
-bindkey '^[j' forward-word
+bindkey '^[l' forward-word # Alt-l
+bindkey '^[h' backward-word # Alt-h
+bindkey '^[^?' backward-kill-word # Alt-Backspace
+bindkey '^[[3;3~' kill-word # Alt-Delete
 bindkey -r '^P'
 # bindkey -v
 
