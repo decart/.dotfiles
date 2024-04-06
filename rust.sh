@@ -20,5 +20,5 @@ cargo install \
   zoxide \
   git-delta \
   tree-sitter-cli \
+  zellij \
   tealdeer && tldr --update
-
