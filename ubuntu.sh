@@ -29,7 +29,6 @@ sudo apt -y install \
   mariadb-server \
   mariadb-client \
   libmariadb-dev \
-  fzf \
   imagemagick
 
 sudo apt -y install\

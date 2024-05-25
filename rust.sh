@@ -16,7 +16,7 @@ cargo install \
   exa \
   du-dust \
   ripgrep \
-  ytop \
+  bottom \
   zoxide \
   git-delta \
   tree-sitter-cli \
