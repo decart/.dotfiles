@@ -12,5 +12,10 @@ vim.keymap.set("n", "<C-_>", function()
   return comment.operator() .. "_"
 end, { expr = true, desc = "Comment" })
 
+-- formatting
+vim.keymap.set({ "n", "v" }, "<leader>cf", function()
+  vim.lsp.buf.format()
+end, { desc = "Format" })
+
 -- vim.keymap.del("n", "<C-/>")
 -- vim.keymap.del("n", "<C-_>")
