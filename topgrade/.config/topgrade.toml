@@ -1,6 +1,7 @@
 [misc]
 [git]
 repos = [
-  "~/data/html/*/",
-  "~/data/javascript/*/",
+  "~/Projects/php/*/",
+  "~/Projects/js/*/",
+  "~/Projects/python/*/",
 ]
